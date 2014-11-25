@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{%- macro render_cta(cont, cls) %}
+        <div class="cta-wrapper">
+            <div class="container">
+                <div class="{{ cls }}">
+                    <div>{{ cont.text }} <span class="cta-action"><a href="{{ cont.action.url }}">{{ cont.action.text.replace(' ', '&nbsp;')|safe }}</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+{%- endmacro %}
+
+{% block title %}{{ cont.page_title }}{% endblock %}
+
+{%- block content %}
+        <div class="container">
+            <div class="main-carousel">
+            {%- for item in cont.main_carousel.slides %}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-sm-offset-1">
+                        <div class="slide-txt">
+                            <div class="slide-txt-wrapper">
+                                <div class="slide-title">{{ item.title }}</div>
+                                <div class="slide-copy">{{ item.text }}</div>
+                                <div class="slide-action">
+                                    <a href="{{ item.action.url }}">{{ item.action.text }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-5">
+                        <a href="{{ item.img.url }}">
+                            <div class="slide-img">
+                                <img src="{{ url_for('static', filename=item.img.file) }}" alt="{{ item.img.desc }}">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {%- endfor %}
+            </div>
+        </div>
+
+{{- render_cta(cont.cta.top, 'cta-top') }}
+        <div class="sec-carousel-wrapper">
+            <div class="container">
+                <div class="sec-carousel">
+                {%- for item in cont.sec_carousel.slides %}
+                    <div>
+                        <a href="{{ item.img.url }}">
+                            <div class="sec-slide-img">
+                                <img src="{{ url_for('static', filename=item.img.file) }}" alt="{{ item.img.desc }}">
+                            </div>
+                        </a>
+                        <div class="sec-slide-title">{{ item.title }}</div>
+                        <div class="sec-slide-copy">{{ item.text }}</div>
+                        <div class="sec-slide-action">
+                            <a href="{{ item.action.url }}">{{ item.action.text }}</a>
+                        </div>
+                    </div>
+                {%- endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-text-wrapper">
+            <div class="container">
+                <div class="middle-text">
+                    <div>{{ cont.middle_text }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="clients-wrapper">
+            <div class="container">
+                <div class="clients-carousel">
+                {%- for item in cont.clients %}
+                    <div>
+                        <a href="{{ item.url }}">
+                            <div class="clients-img">
+                                <img src="{{ url_for('static', filename=item.file) }}" alt="{{ item.desc }}">
+                            </div>
+                        </a>
+                    </div>
+                {%- endfor %}
+                </div>
+            </div>
+        </div>
+{{- render_cta(cont.cta.bottom, 'cta-bottom') -}}
+
+{%- endblock content -%}
