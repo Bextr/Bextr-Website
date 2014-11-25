@@ -31,15 +31,15 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4">
                     <div class="logo">
-                        <a href="{{ cont.header.logo.url }}">
-                            <img src="{{ url_for('static', filename=cont.header.logo.file) }}" alt="{{ cont.header.logo.desc }}">
-                            <span class="sr-only">{{ cont.header.logo.desc }}</span>
+                        <a href="{{ c_global.header.logo.url }}">
+                            <img src="{{ url_for('static', filename=c_global.header.logo.file) }}" alt="{{ c_global.header.logo.desc }}">
+                            <span class="sr-only">{{ c_global.header.logo.desc }}</span>
                         </a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-8">
                     <ul class="menu">
-                        {%- for item in cont.header.menu %}
+                        {%- for item in c_global.header.menu %}
                         <li><a href="{{ item.url }}">{{ item.text.replace(' ', '&nbsp;')|safe }}</a></li>
                         {%- endfor %}
                     </ul>
@@ -57,7 +57,7 @@
                 <div class="col-xs-12 col-sm-4 col-md-3">
                 <div class="footer-social-wrapper">
                     <ul class="footer-social">
-                        {%- for item in cont.footer.social %}
+                        {%- for item in c_global.footer.social %}
                         <li>
                             <a href="{{ item.url }}" target="_blank">
                                 <img src="{{ url_for('static', filename=item.file) }}" alt="{{ item.desc }}">
@@ -71,7 +71,7 @@
                 <ul class="col-xs-12 col-sm-7 col-md-5 col-sm-offset-1 col-md-offset-4">
                     <div class="footer-menu-wrapper">
                     <ul class="footer-menu">
-                        {%- for item in cont.footer.menu %}
+                        {%- for item in c_global.footer.menu %}
                         <li><a href="{{ item.url }}">{{ item.text.replace(' ', '&nbsp;')|safe }}</a></li>
                         {%- endfor %}
                     </ul>

@@ -11,12 +11,12 @@
         </div>
 {%- endmacro %}
 
-{% block title %}{{ cont.page_title }}{% endblock %}
+{% block title %}{{ c_page.page_title }}{% endblock %}
 
 {%- block content %}
         <div class="container">
             <div class="main-carousel">
-            {%- for item in cont.main_carousel.slides %}
+            {%- for item in c_page.main_carousel.slides %}
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-sm-offset-1">
                         <div class="slide-txt">
@@ -41,11 +41,11 @@
             </div>
         </div>
 
-{{- render_cta(cont.cta.top, 'cta-top') }}
+{{- render_cta(c_page.cta.top, 'cta-top') }}
         <div class="sec-carousel-wrapper">
             <div class="container">
                 <div class="sec-carousel">
-                {%- for item in cont.sec_carousel.slides %}
+                {%- for item in c_page.sec_carousel.slides %}
                     <div>
                         <a href="{{ item.img.url }}">
                             <div class="sec-slide-img">
@@ -66,14 +66,14 @@
         <div class="middle-text-wrapper">
             <div class="container">
                 <div class="middle-text">
-                    <div>{{ cont.middle_text }}</div>
+                    <div>{{ c_page.middle_text }}</div>
                 </div>
             </div>
         </div>
         <div class="clients-wrapper">
             <div class="container">
                 <div class="clients-carousel">
-                {%- for item in cont.clients %}
+                {%- for item in c_page.clients %}
                     <div>
                         <a href="{{ item.url }}">
                             <div class="clients-img">
@@ -85,6 +85,6 @@
                 </div>
             </div>
         </div>
-{{- render_cta(cont.cta.bottom, 'cta-bottom') -}}
+{{- render_cta(c_page.cta.bottom, 'cta-bottom') -}}
 
 {%- endblock content -%}

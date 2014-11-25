@@ -1,5 +1,8 @@
 import json
 
+with open('app/content/global.json') as json_file:
+    cont_global = json.load(json_file)
+
 with open('app/content/home.json') as json_file:
     cont_home = json.load(json_file)
 
