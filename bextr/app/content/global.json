@@ -1,0 +1,65 @@
+{
+    "header":{
+        "logo":{
+            "file":"svg/bextr_logo.svg",
+            "url":"/",
+            "desc":"bextr logo"
+        },
+        "menu":[
+            {
+                "text":"TOUCHSCREENS",
+                "url":"/touchscreens"
+            },
+            {
+                "text":"SIGNAGE",
+                "url":"/signage"
+            },
+            {
+                "text":"ABOUT",
+                "url":"/about"
+            },
+            {
+                "text":"CALL US",
+                "url":"/contact"
+            }
+        ]
+    },
+    "footer":{
+        "social":[
+            {
+                "file":"svg/linkedin.svg",
+                "url":"#",
+                "desc":"Bextr Linkedin"
+            },
+            {
+                "file":"svg/facebook.svg",
+                "url":"https://www.facebook.com/bextradvertising",
+                "desc":"Bextr Facebook"
+            },
+            {
+                "file":"svg/twitter.svg",
+                "url":"https://twitter.com/BextrAds",
+                "desc":"Bextr Twitter"
+            },
+            {
+                "file":"svg/github.svg",
+                "url":"#",
+                "desc":"Bextr Github"
+            }
+        ],
+        "menu":[
+            {
+                "text":"Privacy Policy",
+                "url":"#"
+            },
+            {
+                "text":"Contact",
+                "url":"/contact"
+            },
+            {
+                "text":"Blog",
+                "url":"#"
+            }
+        ]
+    }
+}
