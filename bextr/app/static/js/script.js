@@ -7,7 +7,7 @@ function setNavigation() {
     path = path.replace(/\/$/, "");
     path = decodeURIComponent(path);
 
-    $(".menu a").each(function () {
+    $(".navbar-nav a").each(function () {
         var href = $(this).attr('href');
         if (path.substring(0, href.length) === href) {
             $(this).closest('a').addClass('current');
