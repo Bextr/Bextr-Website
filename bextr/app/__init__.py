@@ -7,7 +7,7 @@ app.config.from_object('config')
 
 if not app.config['FROZEN']:
     from flask_bootstrap import Bootstrap
-    from .views import home, touchscreens, signage, about, contact
+    from .views import home, touchscreens, signage, about, contact  # @UnresolvedImport
     Bootstrap(app)
     app.register_blueprint(home)
     app.register_blueprint(touchscreens)

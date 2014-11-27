@@ -3,6 +3,8 @@ html, body {
     background-color: #2E3234;
     width: 100%;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 a, a:active, a:focus {
@@ -57,7 +59,6 @@ ul {
 
 .navbar-inverse .navbar-nav > li > a {
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 400;
     font-size: 180%;
     color: #BDC3C7;
 }
@@ -100,7 +101,6 @@ ul {
     color: grey;
 }
 
-
 .slick-dots {
    bottom: initial;
 }
@@ -116,10 +116,21 @@ ul {
 }
 /* jquery slick end */
 
+
 .clients-wrapper {
     background-color: white;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
+
+.clients-title {
+    font-weight: 700;
+    font-size: 120%;
+    color: #6c6d6d;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 
 .clients-img {
     width: 100%;
@@ -128,7 +139,8 @@ ul {
 
 .sec-carousel-wrapper {
     background-color: white;
-    padding-top: 30px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .sec-slide-img {
@@ -137,7 +149,6 @@ ul {
 }
 
 .sec-slide-title, .sec-slide-copy, .sec-slide-action {
-    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
@@ -168,12 +179,11 @@ ul {
 }
 
 .slide-img {
-    width: 300px;
+    width: inherit;
     height: 150px;
 }
 
 .slide-txt {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     text-align: center;
     margin-bottom: 40px;
@@ -204,20 +214,15 @@ ul {
 }
 
 .middle-text {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 160%;
     color: #6c6d6d;
-    width: 100%;
-    display: table;
     text-align: center;
 }
 
 .middle-text > div {
-    display: table-cell;
-    vertical-align: middle;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    width: 80%;
+    margin: 40px auto;
 }
 
 .cta-wrapper {
@@ -225,11 +230,10 @@ ul {
 }
 
 .cta-top, .cta-bottom {
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 180%;
     color: #6c6d6d;
-    height: 100px;
+    height: 120px;
     width: 100%;
     display: table;
     text-align: center;
@@ -248,7 +252,6 @@ ul {
 
 /* footer start */
 .footer-menu a {
-    font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 180%;
     color: #BDC3C7;
@@ -312,10 +315,6 @@ ul {
         height: 300px;
     }
 
-    .slide-img {
-        width: 283px;
-    }
-
     .slide-txt {
         text-align: initial;
         margin-bottom: initial;
@@ -332,7 +331,7 @@ ul {
     }
 
     .slide-copy {
-       font-size: 155%;
+        font-size: 155%;
         margin-top: 12%;
     }
     
@@ -365,10 +364,6 @@ ul {
         height: 400px;
     }
 
-    .slide-img {
-        width: 374px;
-    }
-
     .slide-title {
         font-size: 420%;
     }
@@ -393,11 +388,6 @@ ul {
         margin-left: 70px;
     }
     /* header end */
-
-
-    .slide-img {
-        width: 458px;
-    }
 
     .slide-title {
         font-size: 500%;
