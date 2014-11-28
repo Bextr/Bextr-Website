@@ -1,15 +1,13 @@
 {% extends "layout.html" %}
-{% from 'template_macros.html' import cta, main_crs, sec_crs, middle_text, clients_crs %}
+{% from 'template_macros.html' import cta, main_crs, sec_crs, middle_text, client_crs %}
 
 {% block title %}{{ c_page.page_title }}{% endblock %}
 
 {%- block content %}
-
 {{- main_crs(c_page.main_carousel) }}
-{{- cta(c_page.cta.top, 'cta-top') }}
+{{- cta(c_page.cta.top) }}
 {{- sec_crs(c_page.sec_carousel) }}
 {{- middle_text(c_page.middle_text) }}
-{{- clients_crs(c_page.clients_carousel) }}
-{{- cta(c_page.cta.bottom, 'cta-bottom') -}}
-
-{%- endblock content -%}
+{{- client_crs(c_page.clients_carousel) }}
+{{- cta(c_page.cta.bottom) }}
+{%- endblock content %}

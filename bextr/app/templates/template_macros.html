@@ -1,17 +1,11 @@
-{%- macro cta(cont, cls) %}
+{%- macro cta(cont) %}
         <div class="cta-wrapper">
             <div class="container">
-                <div class="{{ cls }}">
+                <div class="cta">
                     <div>{{ cont.text }} <span class="cta-action"><a href="{{ cont.action.url }}">{{ cont.action.text.replace(' ', '&nbsp;')|safe }}</a></span>
                     </div>
                 </div>
             </div>
-        </div>
-{%- endmacro %}
-
-{%- macro breadcrumb(cont) %}
-        <div class="container breadcrumb">
-            <div>{{ cont }}</div>
         </div>
 {%- endmacro %}
 
@@ -67,6 +61,28 @@
         </div>
 {%- endmacro %}
 
+{%- macro product_crs(cont) %}
+        <div class="product-carousel-wrapper">
+            <div class="container">
+                <div class="product-carousel">
+                {%- for item in cont %}
+                    <div>
+                        <a href="{{ item.url }}" 
+                        onmouseover="this.getElementsByClassName('product-image')[0].src='{{ url_for('static', filename=item.img_active) }}';" 
+                        onmouseout="this.getElementsByClassName('product-image')[0].src='{{ url_for('static', filename=item.img) }}';"
+                        >
+                            <div class="product-slide-img">
+                                <img class="product-image" src="{{ url_for('static', filename=item.img) }}" alt="{{ item.desc }}">
+                            </div>
+                            <div class="product-slide-title">{{ item.title }}</div>
+                        </a>
+                    </div>
+                {%- endfor %}
+                </div>
+            </div>
+        </div>
+{%- endmacro %}
+
 {%- macro middle_text(cont) %}
         <div class="middle-text-wrapper">
             <div class="container">
@@ -77,15 +93,15 @@
         </div>
 {%- endmacro %}
 
-{%- macro clients_crs(cont) %}
-        <div class="clients-wrapper">
+{%- macro client_crs(cont) %}
+        <div class="client-wrapper">
             <div class="container">
-                <div class="clients-title">{{ cont.title }}</div>
-                <div class="clients-carousel">
+                <div class="client-title">{{ cont.title }}</div>
+                <div class="client-carousel">
                 {%- for item in cont.clients %}
                     <div>
                         <a href="{{ item.url }}">
-                            <div class="clients-img">
+                            <div class="client-img">
                                 <img src="{{ url_for('static', filename=item.file) }}" alt="{{ item.desc }}">
                             </div>
                         </a>

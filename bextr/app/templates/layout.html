@@ -1,8 +1,5 @@
-{%- block doc -%}
 <!DOCTYPE html>
 <html{% block html_attribs %}{% endblock html_attribs %}>
-
-{%- block html %}
     <head>
 
     {%- block head %}
@@ -51,9 +48,6 @@
             </div>
         </nav>
     {%- endblock header %}
-
-    {%- block breadcrumb %}
-    {% endblock breadcrumb %}
 
     {%- block content %}
     {% endblock content %}
@@ -104,6 +98,4 @@
     {%- endblock scripts %}
     {%- endblock body %}
     </body>
-{%- endblock html %}
 </html>
-{% endblock doc -%}

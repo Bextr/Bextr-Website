@@ -1,6 +1,42 @@
 {
-    "page_title":"Bextr",
-	"breadcrumb":"Touchscreens",
+    "page_title":"Bextr - Touchscreens",
+	"products":[
+	    {
+	    	"title":"Indoor Kiosks",
+	    	"img":"svg/indoor_kiosk.svg",
+	    	"img_active":"svg/indoor_kiosk_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    },
+	    {
+	    	"title":"Outdoor Kiosks",
+	    	"img":"svg/outdoor_kiosk.svg",
+	    	"img_active":"svg/outdoor_kiosk_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    },
+	    {
+	    	"title":"Touch Tables",
+	    	"img":"svg/touch_table.svg",
+	    	"img_active":"svg/touch_table_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    },
+	    {
+	    	"title":"Touch Windows",
+	    	"img":"svg/touch_window.svg",
+	    	"img_active":"svg/touch_window_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    },
+	    {
+	    	"title":"Outdoor Kiosks",
+	    	"img":"svg/outdoor_kiosk.svg",
+	    	"img_active":"svg/outdoor_kiosk_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    }
+	],
     "main_carousel":{
         "slides":[
             {

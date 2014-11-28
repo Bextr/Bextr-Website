@@ -117,24 +117,52 @@ ul {
 /* jquery slick end */
 
 
-.clients-wrapper {
+.client-wrapper {
     background-color: white;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.clients-title {
+.client-title {
     font-weight: 700;
     font-size: 120%;
-    color: #6c6d6d;
+    color: #b2b5b7;
     text-align: center;
     margin-bottom: 40px;
 }
 
 
-.clients-img {
+.client-img {
     width: 100%;
     height: 70px;
+}
+
+.product-carousel-wrapper {
+    background-color: #363B3D;
+    padding-top: 30px;
+    margin-top: 15px;
+}
+
+.product-slide-img {
+    width: 100%;
+    height: 60px;
+}
+
+.product-slide-title {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 120%;
+    font-weight: 500;
+}
+
+.product-carousel a, .product-carousel a:visited {
+    color: #909090;
+}
+
+.product-carousel a:hover,
+.product-carousel a:active,
+.product-carousel a.current {
+    color: #c51b50;
 }
 
 .sec-carousel-wrapper {
@@ -229,7 +257,7 @@ ul {
     background-color: #eef1f2;
 }
 
-.cta-top, .cta-bottom {
+.cta {
     font-weight: 300;
     font-size: 180%;
     color: #6c6d6d;
@@ -239,7 +267,7 @@ ul {
     text-align: center;
 }
 
-.cta-top > div, .cta-bottom > div {
+.cta > div {
     display: table-cell;
     vertical-align: middle;
 }
@@ -339,6 +367,10 @@ ul {
         font-size: 155%;
     }
 
+	.product-slide-title {
+	    font-size: 140%;
+	}
+
 }
 
 
@@ -375,6 +407,10 @@ ul {
     
     .slide-action {
         font-size: 187%;
+    }
+
+    .product-slide-title {
+        font-size: 150%;
     }
 
 }

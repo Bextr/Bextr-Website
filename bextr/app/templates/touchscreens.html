@@ -1,15 +1,12 @@
 {% extends "layout.html" %}
-{% from 'template_macros.html' import cta, main_crs, sec_crs, breadcrumb %}
+{% from 'template_macros.html' import cta, main_crs, sec_crs, product_crs %}
 
 {% block title %}{{ c_page.page_title }}{% endblock %}
 
-{%- block breadcrumb %}
-{{ breadcrumb(c_page.breadcrumb) }}
-{% endblock breadcrumb %}
-
 {%- block content %}
+{{- product_crs(c_page.products) }}
 {{- main_crs(c_page.main_carousel) }}
-{{- cta(c_page.cta.top, 'cta-top') }}
+{{- cta(c_page.cta.top) }}
 {{- sec_crs(c_page.sec_carousel) }}
-{{- cta(c_page.cta.bottom, 'cta-bottom') -}}
-{%- endblock content -%}
+{{- cta(c_page.cta.bottom) }}
+{%- endblock content %}

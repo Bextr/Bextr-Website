@@ -1,1 +1,155 @@
-{}
+{
+    "page_title":"Bextr - Signage",
+	"products":[
+	    {
+	    	"title":"Indoor Kiosks",
+	    	"img":"svg/indoor_kiosk.svg",
+	    	"img_active":"svg/indoor_kiosk_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    },
+	    {
+	    	"title":"Outdoor Kiosks",
+	    	"img":"svg/outdoor_kiosk.svg",
+	    	"img_active":"svg/outdoor_kiosk_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    },
+	    {
+	    	"title":"Touch Tables",
+	    	"img":"svg/touch_table.svg",
+	    	"img_active":"svg/touch_table_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    },
+	    {
+	    	"title":"Touch Windows",
+	    	"img":"svg/touch_window.svg",
+	    	"img_active":"svg/touch_window_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    },
+	    {
+	    	"title":"Outdoor Kiosks",
+	    	"img":"svg/outdoor_kiosk.svg",
+	    	"img_active":"svg/outdoor_kiosk_current.svg",
+	    	"url":"",
+	    	"desc":""
+	    }
+	],
+    "main_carousel":{
+        "slides":[
+            {
+                "title":"Digital Signage",
+                "text":"Accept orders, receive payments from unmanned tablet stations",
+                "action":{
+                    "text":"Learn more",
+                    "url":"/signage"
+                },
+                "img":{
+                    "file":"img/img_1.png",
+                    "url":"/signage",
+                    "desc":""
+                }
+            },
+            {
+                "title":"Touchscreens",
+                "text":"Accept orders, receive payments from unmanned tablet stations",
+                "action":{
+                    "text":"Learn more",
+                    "url":"/touchscreens"
+                },
+                "img":{
+                    "file":"img/img_2.png",
+                    "url":"/touchscreens",
+                    "desc":""
+                }
+            }
+        ]
+    },
+    "sec_carousel":{
+        "slides":[
+            {
+                "title":"Digital Signage",
+                "text":"Lorem ipsum dolor sit amet",
+                "action":{
+                    "text":"Learn more",
+                    "url":"/signage"
+                },
+                "img":{
+                    "file":"img/img_1.png",
+                    "url":"/signage",
+                    "desc":""
+                }
+            },
+            {
+                "title":"Bextr on the field",
+                "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "action":{
+                    "text":"Watch",
+                    "url":"/touchscreens"
+                },
+                "img":{
+                    "file":"img/video_thumb.jpg",
+                    "url":"/touchscreens",
+                    "desc":""
+                }
+            },
+            {
+                "title":"Touchscreens",
+                "text":"Lorem ipsum dolor sit amet",
+                "action":{
+                    "text":"Learn more",
+                    "url":"/touchscreens"
+                },
+                "img":{
+                    "file":"img/img_2.png",
+                    "url":"/touchscreens",
+                    "desc":""
+                }
+            },
+            {
+                "title":"Touchscreens",
+                "text":"Lorem ipsum dolor sit amet",
+                "action":{
+                    "text":"Learn more",
+                    "url":"/touchscreens"
+                },
+                "img":{
+                    "file":"img/img_2.png",
+                    "url":"/touchscreens",
+                    "desc":""
+                }
+            },
+            {
+                "title":"Touchscreens",
+                "text":"Lorem ipsum dolor sit amet",
+                "action":{
+                    "text":"Learn more",
+                    "url":"/touchscreens"
+                },
+                "img":{
+                    "file":"img/img_2.png",
+                    "url":"/touchscreens",
+                    "desc":""
+                }
+            }
+        ]
+    },
+    "cta":{
+        "top":{
+            "text":"Want to hear the latest from bextr?",
+            "action":{
+                "text":"Subscribe",
+                "url":"/contact"
+            }
+        },
+        "bottom":{
+            "text":"Speak to a live person. Call",
+            "action":{
+                "text":"(888) 605-4866",
+                "url":"/contact"
+            }
+        }
+    }
+}
