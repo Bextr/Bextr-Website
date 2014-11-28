@@ -38,13 +38,23 @@
         </div>
 {%- endmacro %}
 
+{%- macro lightbox_setter(cont) %}
+{%- if cont.enabled -%}
+{%- if cont.is_video -%}
+video-gallery
+{%- else -%}
+image-gallery
+{%- endif -%}
+{%- endif -%}
+{%- endmacro %}
+
 {%- macro sec_crs(cont) %}
         <div class="sec-carousel-wrapper">
             <div class="container">
                 <div class="sec-carousel">
                 {%- for item in cont.slides %}
                     <div>
-                        <a href="{{ item.img.url }}">
+                        <a class="{{ lightbox_setter(item.img.lightbox) }}" href="{{ item.img.url }}">
                             <div class="sec-slide-img">
                                 <img src="{{ url_for('static', filename=item.img.file) }}" alt="{{ item.img.desc }}">
                             </div>
@@ -52,7 +62,7 @@
                         <div class="sec-slide-title">{{ item.title }}</div>
                         <div class="sec-slide-copy">{{ item.text }}</div>
                         <div class="sec-slide-action">
-                            <a href="{{ item.action.url }}">{{ item.action.text }}</a>
+                            <a class="{{ lightbox_setter(item.action.lightbox) }}" href="{{ item.action.url }}">{{ item.action.text }}</a>
                         </div>
                     </div>
                 {%- endfor %}

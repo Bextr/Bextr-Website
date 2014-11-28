@@ -80,7 +80,7 @@ $(document).ready(function(){
     
     
     
-    $('.clients-carousel').slick({
+    $('.client-carousel').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
@@ -107,21 +107,25 @@ $(document).ready(function(){
         ]
     });
 
-
-    
-
-
     center_img($('.slide-img img'));
     center_img($('.sec-slide-img img'));
     center_img($('.product-slide-img img'));
-    center_img($('.clients-img img'));
+    center_img($('.client-img img'));
 
-    jQuery('a.gallery').colorbox({
-        opacity: 1 ,
+    jQuery('a.image-gallery').colorbox({
+        opacity: 0.5,
         rel: 'group1',
+        maxWidth: "100%",
+        maxHeight: "90%",
+    });
+    jQuery('a.video-gallery').colorbox({
+        opacity: 0.5,
+        rel: 'group2',
+        iframe:true,
         maxWidth: "90%",
-        maxHeight: "80%",
-        transition:"fade",
+        maxHeight: "90%",
+        innerWidth:640,
+        innerHeight:390
     });
 });
 
@@ -130,5 +134,5 @@ $(window).resize(function() {
     center_img($('.slide-img img'));
     center_img($('.sec-slide-img img'));
     center_img($('.product-slide-img img'));
-    center_img($('.clients-img img'));
+    center_img($('.client-img img'));
 });

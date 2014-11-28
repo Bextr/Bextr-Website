@@ -36,13 +36,21 @@
                 "title":"Digital Signage",
                 "text":"Lorem ipsum dolor sit amet",
                 "action":{
-                    "text":"Learn more",
-                    "url":"/signage"
+                    "text":"View",
+                    "url":"/static/img/img_1.png",
+                    "lightbox":{
+                    	"enabled":true,
+            			"is_video":false
+                    }
                 },
                 "img":{
                     "file":"img/img_1.png",
-                    "url":"/signage",
-                    "desc":""
+                    "url":"/static/img/img_1.png",
+                    "desc":"",
+                    "lightbox":{
+                    	"enabled":true,
+            			"is_video":false
+                    }
                 }
             },
             {
@@ -50,12 +58,20 @@
                 "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
                 "action":{
                     "text":"Watch",
-                    "url":"/touchscreens"
+                    "url":"http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent",
+                    "lightbox":{
+                    	"enabled":true,
+            			"is_video":true
+                    }
                 },
                 "img":{
                     "file":"img/video_thumb.jpg",
-                    "url":"/touchscreens",
-                    "desc":""
+                    "url":"http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent",
+                    "desc":"",
+                    "lightbox":{
+                    	"enabled":true,
+            			"is_video":true
+                    }
                 }
             },
             {
@@ -63,12 +79,20 @@
                 "text":"Lorem ipsum dolor sit amet",
                 "action":{
                     "text":"Learn more",
-                    "url":"/touchscreens"
+                    "url":"/touchscreens",
+                    "lightbox":{
+                    	"enabled":false,
+            			"is_video":false
+                    }
                 },
                 "img":{
                     "file":"img/img_2.png",
                     "url":"/touchscreens",
-                    "desc":""
+                    "desc":"",
+                    "lightbox":{
+                    	"enabled":false,
+            			"is_video":false
+                    }
                 }
             },
             {
@@ -76,12 +100,20 @@
                 "text":"Lorem ipsum dolor sit amet",
                 "action":{
                     "text":"Learn more",
-                    "url":"/touchscreens"
+                    "url":"/touchscreens",
+                    "lightbox":{
+                    	"enabled":false,
+            			"is_video":false
+                    }
                 },
                 "img":{
                     "file":"img/img_2.png",
                     "url":"/touchscreens",
-                    "desc":""
+                    "desc":"",
+                    "lightbox":{
+                    	"enabled":false,
+            			"is_video":false
+                    }
                 }
             },
             {
@@ -89,12 +121,20 @@
                 "text":"Lorem ipsum dolor sit amet",
                 "action":{
                     "text":"Learn more",
-                    "url":"/touchscreens"
+                    "url":"/touchscreens",
+                    "lightbox":{
+                    	"enabled":false,
+            			"is_video":false
+                    }
                 },
                 "img":{
                     "file":"img/img_2.png",
                     "url":"/touchscreens",
-                    "desc":""
+                    "desc":"",
+                    "lightbox":{
+                    	"enabled":false,
+            			"is_video":false
+                    }
                 }
             }
         ]
