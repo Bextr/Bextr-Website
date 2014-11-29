@@ -1,3 +1,13 @@
+{%- macro lightbox_setter(cont) %}
+	{%- if cont.enabled -%}
+		{%- if cont.is_video -%}
+		    video-gallery
+		{%- else -%}
+		    image-gallery
+		{%- endif -%}
+	{%- endif -%}
+{%- endmacro %}
+
 {%- macro cta(cont) %}
         <div class="cta-wrapper">
             <div class="container">
@@ -36,16 +46,6 @@
             {%- endfor %}
             </div>
         </div>
-{%- endmacro %}
-
-{%- macro lightbox_setter(cont) %}
-{%- if cont.enabled -%}
-{%- if cont.is_video -%}
-video-gallery
-{%- else -%}
-image-gallery
-{%- endif -%}
-{%- endif -%}
 {%- endmacro %}
 
 {%- macro sec_crs(cont) %}
@@ -121,5 +121,3 @@ image-gallery
             </div>
         </div>
 {%- endmacro %}
-
-

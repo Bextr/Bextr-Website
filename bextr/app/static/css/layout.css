@@ -1,8 +1,11 @@
 /* global start */
 html, body {
-    background-color: #2E3234;
     width: 100%;
     height: 100%;
+}
+
+body {
+    background-color: #2E3234;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
@@ -134,13 +137,21 @@ ul {
 
 .client-img {
     width: 100%;
-    height: 70px;
+    height: 50px;
+    opacity: 0.7;
 }
 
 .product-carousel-wrapper {
     background-color: #363B3D;
-    padding-top: 30px;
     margin-top: 15px;
+}
+
+.product-carousel {
+    background-color: #363B3D;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: initial;
+    opacity: 0;
 }
 
 .product-slide-img {
@@ -204,6 +215,7 @@ ul {
 .main-carousel {
     padding-top: 30px;
     padding-bottom: 30px;
+    opacity: 0;
 }
 
 .slide-img {
@@ -249,7 +261,7 @@ ul {
 }
 
 .middle-text > div {
-    width: 80%;
+    width: 90%;
     margin: 40px auto;
 }
 
@@ -295,17 +307,17 @@ ul {
 }
 
 .footer-social-wrapper, .footer-menu-wrapper {
-    height: 70px;
+    height: 100px;
 }
 
 .footer-social, .footer-menu {
     text-align: justify;
     height: 30px;
-    padding-top: 20px;
+    padding-top: 35px;
 }
 
 .footer-social {
-    padding-top: 25px;
+    padding-top: 40px;
 }
 
 .footer-social img {
@@ -370,6 +382,11 @@ ul {
 	.product-slide-title {
 	    font-size: 140%;
 	}
+
+	.middle-text > div {
+	    width: 80%;
+	}
+
 
 }
 
