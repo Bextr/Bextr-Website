@@ -1,5 +1,21 @@
 {% extends "layout.html" %}
+{% from 'template_macros.html' import cta %}
 
-{% block content %}
+{% block title %}{{ c_page.page_title }}{% endblock %}
 
-{% endblock content %}
+{%- block content %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 aboutus">
+                        <div class="aboutus-title">{{ c_page.intro.title }}</div>
+                        <div class="aboutus-desc">{{ c_page.intro.text }}</div>
+                    </div>
+                </div>
+            </div>
+{{- cta(c_page.cta.top) }}
+
+
+
+
+{{- cta(c_page.cta.bottom) }}
+{%- endblock content %}

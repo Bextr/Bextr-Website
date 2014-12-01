@@ -1,4 +1,3 @@
-import os
 import json
 from os.path import join, abspath
 
@@ -48,12 +47,3 @@ with open(join(cont_dir, 'indoor_signage.json')) as j_file:
 
 with open(join(cont_dir, 'outdoor_signage.json')) as j_file:
     c_outdoor_signage = json.load(j_file)
-
-# c_products = []
-# prod_dir = join(cont_dir, 'products')
-# for prod in os.listdir(prod_dir):
-#     if prod.endswith('.json'):
-#         with open(join(prod_dir, prod)) as j_file:
-#             product = json.load(j_file)
-#             product_id = product['id']
-#             c_products[product_id] = product

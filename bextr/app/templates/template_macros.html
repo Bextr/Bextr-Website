@@ -1,11 +1,11 @@
 {%- macro lightbox_setter(cont) %}
-	{%- if cont.enabled -%}
-		{%- if cont.is_video -%}
-		    video-gallery
-		{%- else -%}
-		    image-gallery
-		{%- endif -%}
-	{%- endif -%}
+    {%- if cont.enabled -%}
+        {%- if cont.is_video -%}
+            video-gallery
+        {%- else -%}
+            image-gallery
+        {%- endif -%}
+    {%- endif -%}
 {%- endmacro %}
 
 {%- macro cta(cont) %}
@@ -93,15 +93,13 @@
 {%- macro description(cont) %}
         <div class="description-wrapper">
             <div class="container">
-            
             {%- for item in cont %}
-            <div class="row description">
-	            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-	                {{ item }}
-	            </div>
-            </div>
+                <div class="row description">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        {{ item }}
+                    </div>
+                </div>
             {%- endfor %}
-            
             </div>
         </div>
 {%- endmacro %}

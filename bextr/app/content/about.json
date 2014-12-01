@@ -1,1 +1,62 @@
-{}
+{
+    "page_title":"Bextr - About",
+    "cta":{
+        "top":{
+            "text":"Want to hear the latest from bextr?",
+            "action":{
+                "text":"Subscribe",
+                "url":"/contact"
+            }
+        },
+        "bottom":{
+            "text":"Speak to a live person. Call",
+            "action":{
+                "text":"(888) 605-4866",
+                "url":"/contact"
+            }
+        }
+    },
+    "intro":{
+        "title":"Digital dreams. Bextr.",
+        "text":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae. Nemo enim ipsam voluptatem quia voluptas sit aspernatur."
+    },
+    "team":[
+        {
+            "name":"Jerald Evans",
+            "title":"Title",
+            "desc":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
+            "img":{
+                "file":"",
+                "desc":""
+            }
+        },
+        {
+            "name":"Claire Harmon",
+            "title":"Title",
+            "desc":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
+            "img":{
+                "file":"",
+                "desc":""
+            }
+        },
+        {
+            "name":"Cindy Greer",
+            "title":"Title",
+            "desc":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
+            "img":{
+                "file":"",
+                "desc":""
+            }
+        },
+        {
+            "name":"Willis Ballard",
+            "title":"Title",
+            "desc":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
+            "img":{
+                "file":"",
+                "desc":""
+            }
+        }
+    ]
+
+}
