@@ -1,28 +1,16 @@
 {
-    "page_title":"Bextr - Touchscreens",
+    "page_title":"Bextr - Indoor Signage",
 	"products":[
 	    {
-	    	"title":"Indoor Kiosks",
+	    	"title":"Indoor Signage",
 	    	"img":"svg/indoor_kiosk.svg",
-	    	"url":"/touchscreens/indoor-kiosks",
+	    	"url":"/signage/indoor-signage",
 	    	"desc":""
 	    },
 	    {
-	    	"title":"Outdoor Kiosks",
+	    	"title":"Outdoor Signage",
 	    	"img":"svg/outdoor_kiosk.svg",
-	    	"url":"/touchscreens/outdoor-kiosks",
-	    	"desc":""
-	    },
-	    {
-	    	"title":"Touch Tables",
-	    	"img":"svg/touch_table.svg",
-	    	"url":"/touchscreens/touch-tables",
-	    	"desc":""
-	    },
-	    {
-	    	"title":"Touch Windows",
-	    	"img":"svg/touch_window.svg",
-	    	"url":"/touchscreens/touch-windows",
+	    	"url":"/signage/outdoor-signage",
 	    	"desc":""
 	    }
 	],
@@ -180,5 +168,9 @@
                 "url":"/contact"
             }
         }
-    }
+    },
+    "description":[
+        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+    ]
 }

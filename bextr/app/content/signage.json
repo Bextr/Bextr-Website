@@ -4,15 +4,13 @@
 	    {
 	    	"title":"Indoor Signage",
 	    	"img":"svg/indoor_kiosk.svg",
-	    	"img_active":"svg/indoor_kiosk_current.svg",
-	    	"url":"",
+	    	"url":"/signage/indoor-signage",
 	    	"desc":""
 	    },
 	    {
 	    	"title":"Outdoor Signage",
 	    	"img":"svg/outdoor_kiosk.svg",
-	    	"img_active":"svg/outdoor_kiosk_current.svg",
-	    	"url":"",
+	    	"url":"/signage/outdoor-signage",
 	    	"desc":""
 	    }
 	],
