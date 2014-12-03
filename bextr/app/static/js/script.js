@@ -6,6 +6,45 @@ String.prototype.insertAt = function (index, string) {
 };
 
 
+function fitCenter(){
+      $('.fit-center').each(function(){
+            $(this).position({
+                my: 'center',
+                at: 'center',
+                of: $(this).parent(),
+             });
+        });
+}
+
+
+function setMember(){
+
+        $('.team-member').each(function(index){
+            var img = $(this).find('.member-img');
+            var txt = $(this).find('.member-txt');
+            if(Modernizr.mq('(min-width: 768px)')) {
+                img.css('height', 'initial');
+                txt.css('height', 'initial');
+                var heightImg = img.height();
+                var heightTxt = txt.height();
+                var maxHeight = Math.max(heightImg, heightTxt);
+                img.height(maxHeight);
+                txt.height(maxHeight);
+                if(index % 2 == 0) {
+                    txt.css('text-align', 'left');
+                }
+                else {
+                    txt.css('text-align', 'right');
+                }
+            }
+            else {
+                img.css('height', '150px');
+                txt.css({'height': 'initial', 'text-align': 'center'});
+            }
+        });
+
+}
+
 function setCurrentNav() {
     var path = window.location.pathname;
     path = path.replace(/\/$/, '');
@@ -35,18 +74,9 @@ function setCurrentProductNavImg(item) {
     $(item).attr('src', imgPath.insertAt(dotIndex, '_current'));
 }
 
-
 function unsetCurrentProductNavImg(item) {
     var imgPath = $(item).attr('src')
     $(item).attr('src', imgPath.replace('_current', ''));
-}
-
-
-function centerImg() {
-    $('.slide-img img, \
-        .product-slide-img img, \
-        .sec-slide-img img, \
-        .client-img img').centerImage('inside');
 }
 
 
@@ -72,8 +102,7 @@ $(document).ready(function(){
             }
         }
     );
-    
-    
+
     $('.main-carousel').slick({
         dots: true,
         pauseOnDotsHover: true,
@@ -85,7 +114,6 @@ $(document).ready(function(){
         waitForAnimate: false,
     });
 
-    
     var sec_slide_count = $('.sec-carousel > div').length;
     $('.sec-carousel').slick({
         //dots: true,
@@ -133,7 +161,6 @@ $(document).ready(function(){
         ]
     });
 
-    
     var client_slide_count = $('.client-carousel > div').length;
     $('.client-carousel').slick({
         infinite: true,
@@ -162,7 +189,6 @@ $(document).ready(function(){
         ]
     });
 
-    
     $('a.image-gallery').colorbox({
         opacity: 0.5,
         rel: 'group1',
@@ -170,7 +196,6 @@ $(document).ready(function(){
         maxHeight: '90%',
     });
 
-    
     $('a.video-gallery').colorbox({
         opacity: 0.5,
         rel: 'group2',
@@ -182,14 +207,16 @@ $(document).ready(function(){
     });
 
     setCurrentNav();
-    centerImg();
 
-    
+    setMember();
+
+    fitCenter();
+
     $('.product-carousel, .main-carousel').animate({'opacity': 1}, 100);
 
-    
     $(window).resize(function() {
-        setTimeout(centerImg, 500);
+        setTimeout(setMember, 100);
+        setTimeout(fitCenter, 500);
     });
 
 

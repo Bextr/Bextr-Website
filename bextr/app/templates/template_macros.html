@@ -38,7 +38,7 @@
                     <div class="col-xs-12 col-sm-5">
                         <a href="{{ item.img.url }}">
                             <div class="slide-img">
-                                <img src="{{ url_for('static', filename=item.img.file) }}" alt="{{ item.img.desc }}">
+                                <img class="fit-center" src="{{ url_for('static', filename=item.img.file) }}" alt="{{ item.img.desc }}">
                             </div>
                         </a>
                     </div>
@@ -56,7 +56,7 @@
                     <div>
                         <a class="{{ lightbox_setter(item.img.lightbox) }}" href="{{ item.img.url }}">
                             <div class="sec-slide-img">
-                                <img src="{{ url_for('static', filename=item.img.file) }}" alt="{{ item.img.desc }}">
+                                <img class="fit-center" src="{{ url_for('static', filename=item.img.file) }}" alt="{{ item.img.desc }}">
                             </div>
                         </a>
                         <div class="sec-slide-title">{{ item.title }}</div>
@@ -79,7 +79,7 @@
                     <div>
                         <a href="{{ item.url }}">
                             <div class="product-slide-img">
-                                <img class="product-image" src="{{ url_for('static', filename=item.img) }}" alt="{{ item.desc }}">
+                                <img class="fit-center" src="{{ url_for('static', filename=item.img) }}" alt="{{ item.desc }}">
                             </div>
                             <div class="product-slide-title">{{ item.title }}</div>
                         </a>
@@ -113,7 +113,7 @@
                     <div>
                         <a href="{{ item.url }}">
                             <div class="client-img">
-                                <img src="{{ url_for('static', filename=item.file) }}" alt="{{ item.desc }}">
+                                <img class="fit-center" src="{{ url_for('static', filename=item.file) }}" alt="{{ item.desc }}">
                             </div>
                         </a>
                     </div>

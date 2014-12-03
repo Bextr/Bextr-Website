@@ -4,6 +4,7 @@ html, body {
     height: 100%;
 }
 
+
 body {
     background-color: #2E3234;
     font-family: 'Roboto', sans-serif;
@@ -138,7 +139,7 @@ ul {
 .client-img {
     width: 100%;
     height: 50px;
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .product-carousel-wrapper {
@@ -153,8 +154,8 @@ ul {
 }
 
 .product-carousel {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin-bottom: initial;
     opacity: 0;
 }
@@ -166,9 +167,8 @@ ul {
 
 .product-slide-title {
     text-align: center;
-    padding-top: 15px;
     font-size: 120%;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .product-carousel a, .product-carousel a:visited {
@@ -179,10 +179,6 @@ ul {
 .product-carousel a:active,
 .product-carousel a.current {
     color: #b71a53;
-}
-
-.product-carousel a.current .product-slide-title {
-    font-weight: 700;
 }
 
 .sec-carousel-wrapper {
@@ -342,9 +338,6 @@ ul {
 /* footer end */
 
 
-
-
-
 .aboutus {
     text-align: center;
     margin-top: 30px;
@@ -361,10 +354,62 @@ ul {
 .aboutus-desc {
     font-weight: 100;
     font-size: 160%;
-    color: #afafaf;
+    color: #bababa;
 }
 
 
+
+
+
+.fit-center {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+
+.team-wrapper {
+ background-color: white;
+}
+
+.team-member {
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+
+
+.member-txt {
+    display: table;
+}
+
+.member-txt > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.member-name {
+    color: #5b5b5b;
+    font-weight: 300;
+    font-size: 240%;
+}
+
+.member-title {
+    color: #b2b5b7;
+    font-weight: 900;
+    font-size: 160%;
+}
+
+.member-desc {
+    color: #6c6d6d;
+    font-weight: 300;
+    font-size: 160%;
+    margin-top: 10px;
+}
 
 
 
@@ -384,6 +429,19 @@ ul {
         margin-bottom: initial;
     }
     /* header end */
+
+
+    .member-img {
+        height: initial;
+    }
+
+    .member-name {
+        font-size: 300%;
+    }
+
+    .member-title {
+        font-size: 180%;
+    }
 
 
     .slide-img, .slide-txt {

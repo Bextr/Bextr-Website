@@ -1,31 +1,31 @@
 {
     "page_title":"Bextr - Outdoor Kiosks",
-	"products":[
-	    {
-	    	"title":"Indoor Kiosks",
-	    	"img":"svg/indoor_kiosk.svg",
-	    	"url":"/touchscreens/indoor-kiosks",
-	    	"desc":""
-	    },
-	    {
-	    	"title":"Outdoor Kiosks",
-	    	"img":"svg/outdoor_kiosk.svg",
-	    	"url":"/touchscreens/outdoor-kiosks",
-	    	"desc":""
-	    },
-	    {
-	    	"title":"Touch Tables",
-	    	"img":"svg/touch_table.svg",
-	    	"url":"/touchscreens/touch-tables",
-	    	"desc":""
-	    },
-	    {
-	    	"title":"Touch Windows",
-	    	"img":"svg/touch_window.svg",
-	    	"url":"/touchscreens/touch-windows",
-	    	"desc":""
-	    }
-	],
+    "products":[
+        {
+            "title":"Indoor Kiosks",
+            "img":"svg/indoor_kiosk.svg",
+            "url":"/touchscreens/indoor-kiosks",
+            "desc":""
+        },
+        {
+            "title":"Outdoor Kiosks",
+            "img":"svg/outdoor_kiosk.svg",
+            "url":"/touchscreens/outdoor-kiosks",
+            "desc":""
+        },
+        {
+            "title":"Touch Tables",
+            "img":"svg/touch_table.svg",
+            "url":"/touchscreens/touch-tables",
+            "desc":""
+        },
+        {
+            "title":"Touch Windows",
+            "img":"svg/touch_window.svg",
+            "url":"/touchscreens/touch-windows",
+            "desc":""
+        }
+    ],
     "main_carousel":{
         "slides":[
             {
@@ -65,8 +65,8 @@
                     "text":"Learn more",
                     "url":"/signage",
                     "lightbox":{
-                    	"enabled":false,
-            			"is_video":false
+                        "enabled":false,
+                        "is_video":false
                     }
                 },
                 "img":{
@@ -74,8 +74,8 @@
                     "url":"/signage",
                     "desc":"",
                     "lightbox":{
-                    	"enabled":false,
-            			"is_video":false
+                        "enabled":false,
+                        "is_video":false
                     }
                 }
             },
@@ -86,8 +86,8 @@
                     "text":"Watch",
                     "url":"http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent",
                     "lightbox":{
-                    	"enabled":false,
-            			"is_video":false
+                        "enabled":true,
+                        "is_video":true
                     }
                 },
                 "img":{
@@ -95,8 +95,8 @@
                     "url":"http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent",
                     "desc":"",
                     "lightbox":{
-                    	"enabled":true,
-            			"is_video":true
+                        "enabled":true,
+                        "is_video":true
                     }
                 }
             },
@@ -107,8 +107,8 @@
                     "text":"Learn more",
                     "url":"/touchscreens",
                     "lightbox":{
-                    	"enabled":false,
-            			"is_video":false
+                        "enabled":false,
+                        "is_video":false
                     }
                 },
                 "img":{
@@ -116,8 +116,8 @@
                     "url":"/touchscreens",
                     "desc":"",
                     "lightbox":{
-                    	"enabled":false,
-            			"is_video":false
+                        "enabled":false,
+                        "is_video":false
                     }
                 }
             },
@@ -128,8 +128,8 @@
                     "text":"Learn more",
                     "url":"/touchscreens",
                     "lightbox":{
-                    	"enabled":false,
-            			"is_video":false
+                        "enabled":false,
+                        "is_video":false
                     }
                 },
                 "img":{
@@ -137,8 +137,8 @@
                     "url":"/touchscreens",
                     "desc":"",
                     "lightbox":{
-                    	"enabled":false,
-            			"is_video":false
+                        "enabled":false,
+                        "is_video":false
                     }
                 }
             },
@@ -149,8 +149,8 @@
                     "text":"Learn more",
                     "url":"/touchscreens",
                     "lightbox":{
-                    	"enabled":false,
-            			"is_video":false
+                        "enabled":false,
+                        "is_video":false
                     }
                 },
                 "img":{
@@ -158,8 +158,8 @@
                     "url":"/touchscreens",
                     "desc":"",
                     "lightbox":{
-                    	"enabled":false,
-            			"is_video":false
+                        "enabled":false,
+                        "is_video":false
                     }
                 }
             }
