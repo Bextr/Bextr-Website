@@ -17,12 +17,12 @@
             <div class="container">
             {%- for item in c_page.team %}
                 <div class="row team-member">
-                    <div class="{{ loop.cycle('col-xs-12 col-sm-3 col-md-2 col-sm-offset-1', 'col-xs-12 col-sm-3 col-md-2 col-sm-push-8 col-md-push-9') }}">
+                    <div class="col-xs-12 col-sm-3 col-md-2{{ loop.cycle(' col-sm-offset-1', ' col-sm-push-8 col-md-push-9') }}">
                         <div class="member-img">
                             <img class="fit-center" src="{{ url_for('static', filename=item.img.file) }}" alt="{{ item.img.desc }}">
                         </div>
                     </div>
-                    <div class="{{ loop.cycle('col-xs-12 col-sm-7 col-md-8', 'col-xs-12 col-sm-7 col-md-8 col-sm-offset-1 col-sm-pull-3 col-md-pull-2') }}">
+                    <div class="col-xs-12 col-sm-7 col-md-8{{ loop.cycle('', ' col-sm-offset-1 col-sm-pull-3 col-md-pull-2') }}">
                         <div class="member-txt">
                             <div>
                                 <div class="member-name">{{ item.name }}</div>

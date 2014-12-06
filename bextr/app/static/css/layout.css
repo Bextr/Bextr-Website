@@ -1,14 +1,21 @@
 /* global start */
 html, body {
     width: 100%;
-    height: 100%;
+    //height: 100%;
 }
-
 
 body {
     background-color: #2E3234;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    display: inline;
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
 }
 
 a, a:active, a:focus {

@@ -208,6 +208,11 @@ $(document).ready(function(){
 
     setCurrentNav();
 
+});
+
+
+$(window).load(function() {
+
     setMember();
 
     fitCenter();
@@ -215,9 +220,9 @@ $(document).ready(function(){
     $('.product-carousel, .main-carousel').animate({'opacity': 1}, 100);
 
     $(window).resize(function() {
+        fitCenter();
         setTimeout(setMember, 100);
         setTimeout(fitCenter, 500);
     });
-
 
 });
