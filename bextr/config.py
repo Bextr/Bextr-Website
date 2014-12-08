@@ -13,8 +13,8 @@ DATABASE_CONNECT_OPTIONS = {}
 
 THREADS_PER_PAGE = 2
 
-CSRF_ENABLED = True
-CSRF_SESSION_KEY = ''
+WTF_CSRF_ENABLED = True
+WTF_CSRF_SECRET_KEY = 'This string will be replaced with a proper key in production.'
 
 RECAPTCHA_USE_SSL = False
 RECAPTCHA_PUBLIC_KEY = ''

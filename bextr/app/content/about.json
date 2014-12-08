@@ -12,7 +12,7 @@
             "text":"Speak to a live person. Call",
             "action":{
                 "text":"(888) 605-4866",
-                "url":"/contact"
+                "url":"/contact#call"
             }
         }
     },

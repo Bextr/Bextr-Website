@@ -1,5 +1,49 @@
 {% extends "layout.html" %}
 
+{% block title %}{{ c_page.page_title }}{% endblock %}
+
 {% block content %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2 callus">
+                    <a name="call"></a>
+                    <div class="callus-title">{{ c_page.call.title }}</div>
+                    <div class="callus-desc">{{ c_page.call.desc }}</div>
+                    <div class="callus-action"><a href="{{ c_page.call.action.url }}">{{ c_page.call.action.text.replace(' ', '&nbsp;')|safe }}</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="message-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+                        <a name="message"></a>
+                        <form role="form" action="/api/message" method="POST" class="message-form">
+                        <div class="form-group">
+                            {{ msg_form.name(class='form-control', placeholder='Name') }}
+                        </div>
+                        <div class="form-group">
+                            {{ msg_form.email(class='form-control', placeholder='Email', type='email') }}
+                        </div>
+                        <div class="form-group">
+                            {{ msg_form.text(class='form-control', placeholder='Message', rows=6) }}
+                        </div>
+                            {{ msg_form.hidden_tag() }}
+                            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
 
 {% endblock content %}

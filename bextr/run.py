@@ -1,2 +1,2 @@
-from app import app  # @UnresolvedImport
+from app import app
 app.run()

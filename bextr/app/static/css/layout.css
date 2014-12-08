@@ -1,7 +1,7 @@
 /* global start */
 html, body {
     width: 100%;
-    //height: 100%;
+    height: 100%;
 }
 
 body {
@@ -22,13 +22,20 @@ a, a:active, a:focus {
     outline: none;
 }
 
-a:link {
-    text-decoration: none;
+a, a:link {
+    text-decoration: none !important;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+}
+
+.fit-center {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 /* global end */
 
@@ -128,6 +135,7 @@ ul {
 /* jquery slick end */
 
 
+/* clients start */
 .client-wrapper {
     background-color: white;
     padding-top: 30px;
@@ -148,7 +156,10 @@ ul {
     height: 50px;
     opacity: 0.85;
 }
+/* clients end */
 
+
+/* product carousel start */
 .product-carousel-wrapper {
     background-color: #363B3D;
     margin-top: 15px;
@@ -187,7 +198,10 @@ ul {
 .product-carousel a.current {
     color: #b71a53;
 }
+/* product carousel end */
 
+
+/* secondary carousel start */
 .sec-carousel-wrapper {
     background-color: white;
     padding-top: 50px;
@@ -223,7 +237,10 @@ ul {
     color: #3498db;
     font-weight: 700;
 }
+/* secondary carousel end */
 
+
+/* main carousel start */
 .main-carousel {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -260,7 +277,10 @@ ul {
     color: #3498db;
     font-weight: 700;
 }
+/* main carousel end */
 
+
+/* description start */
 .description-wrapper {
     background-color: #eef1f2;
 }
@@ -273,8 +293,10 @@ ul {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+/* description end */
 
 
+/* call to action start */
 .cta-wrapper {
     background-color: #eef1f2;
 }
@@ -298,6 +320,7 @@ ul {
     font-weight: 700;
     color: #3498db;
 }
+/* call to action end */
 
 
 /* footer start */
@@ -345,6 +368,7 @@ ul {
 /* footer end */
 
 
+/* about us start */
 .aboutus {
     text-align: center;
     margin-top: 30px;
@@ -364,21 +388,6 @@ ul {
     color: #bababa;
 }
 
-
-
-
-
-.fit-center {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-
-
-
 .team-wrapper {
  background-color: white;
 }
@@ -387,8 +396,6 @@ ul {
 margin-top: 50px;
 margin-bottom: 50px;
 }
-
-
 
 .member-txt {
     display: table;
@@ -417,10 +424,51 @@ margin-bottom: 50px;
     font-size: 160%;
     margin-top: 10px;
 }
+/* about us end */
+
+
+/* contact start */
+.callus {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.callus-title {
+    font-weight: 300;
+    font-size: 200%;
+    color: #c9c9c9;
+    
+}
+
+.callus-desc {
+    font-weight: 100;
+    font-size: 160%;
+    color: #bababa;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.callus-action {
+    font-weight: 700;
+    font-size: 280%;
+}
+
+.message-wrapper {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#message-name, #message-email, #message-text {
+    //margin-bottom: 15px;
+    font-size: 120%;
+}
 
 
 
 
+/* contact end */
 
 
 /* tablets */
@@ -474,7 +522,7 @@ margin-bottom: 50px;
         font-size: 155%;
         margin-top: 12%;
     }
-    
+
     .slide-action {
         font-size: 155%;
     }
@@ -496,8 +544,20 @@ margin-bottom: 50px;
         font-size: 300%;
         margin-bottom: 30px;
     }
-    
+
     .aboutus-desc {
+        font-size: 200%;
+    }
+
+    .callus {
+        margin-top: 50px;
+    }
+
+    .callus-title {
+        font-size: 300%;
+    }
+
+    .callus-desc {
         font-size: 200%;
     }
 
@@ -534,7 +594,7 @@ margin-bottom: 50px;
         font-size: 187%;
         margin-top: 15%;
     }
-    
+
     .slide-action {
         font-size: 187%;
     }
@@ -551,8 +611,16 @@ margin-bottom: 50px;
         font-size: 340%;
         margin-bottom: 50px;
     }
-    
+
     .aboutus-desc {
+        font-size: 220%;
+    }
+
+    .callus-title {
+        font-size: 340%;
+    }
+
+    .callus-desc {
         font-size: 220%;
     }
 
@@ -575,13 +643,12 @@ margin-bottom: 50px;
     .slide-copy {
         font-size: 210%;
     }
-    
+
     .slide-action {
         font-size: 210%;
     }
 
 }
-
 
 
 /*

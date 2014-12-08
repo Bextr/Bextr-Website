@@ -208,6 +208,70 @@ $(document).ready(function(){
 
     setCurrentNav();
 
+    $('.message-form').bootstrapValidator({
+        message: 'This value is not valid.',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            'message-name': {
+                message: 'The input is not valid.',
+                validators: {
+                    notEmpty: {
+                        message: 'The name is required and cannot be empty.'
+                    },
+                    stringLength: {
+                        min: 1,
+                        max: 200,
+                        message: 'The name must be more than 1 and less than 200 characters long.'
+                    }
+                }
+            },
+            'message-email': {
+                validators: {
+                    notEmpty: {
+                        message: 'The email is required and cannot be empty.'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address.'
+                    }
+                }
+            },
+            'message-text': {
+                message: 'The input is not valid.',
+                validators: {
+                    notEmpty: {
+                        message: 'The message is required and cannot be empty.'
+                    },
+                    stringLength: {
+                        min: 1,
+                        max: 500,
+                        message: 'The message must be more than 1 and less than 500 characters long.'
+                    }
+                }
+            }
+        }
+    }).on('success.form.bv', function(e){
+        e.preventDefault();
+        var $form = $(e.target);
+
+        $.ajax({
+            url: '/api/message',
+            type: 'POST',
+            accepts: 'text',
+            dataType: 'text',
+            data: $form.serialize(),
+            success: function (data, status, jqXHR) {
+                console.log('success', status);
+            },
+            error: function (jqXHR, status, err) {
+                console.log('error', status, err);
+            }
+        })
+    });
+
 });
 
 
