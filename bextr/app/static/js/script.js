@@ -249,6 +249,10 @@ $(document).ready(function(){
                     },
                     emailAddress: {
                         message: 'The input is not a valid email address.'
+                    },
+                    regexp: {
+                        regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                        message: 'The input is not a valid email address.'
                     }
                 }
             },
@@ -289,6 +293,88 @@ $(document).ready(function(){
                 alert.text('Something went wrong, please try again.')
             }
         })
+    }).on('error.validator.bv', function(e, data) {
+        // data.bv        --> The BootstrapValidator instance
+        // data.field     --> The field name
+        // data.element   --> The field element
+        // data.validator --> The current validator name
+
+        if (data.field === 'message-email') {
+            // The email field is not valid
+            data.element
+                .data('bv.messages')
+                // Hide all the messages
+                .find('.help-block[data-bv-for="' + data.field + '"]').hide()
+                // Show only message associated with current validator
+                .filter('[data-bv-validator="' + data.validator + '"]').show();
+        }
+    });
+
+    $('.subscribe-form').bootstrapValidator({
+        message: 'This value is not valid.',
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            'subscribe-email': {
+                validators: {
+                    notEmpty: {
+                        message: 'The email is required and cannot be empty.'
+                    },
+                    emailAddress: {
+                        message: 'The input is not a valid email address.'
+                    },
+                    regexp: {
+                        regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                        message: 'The input is not a valid email address.'
+                    }
+                }
+            }
+        }
+    }).on('success.form.bv', function(e) {
+        e.preventDefault();
+        var form = $(e.target);
+
+        $.ajax({
+            url: '/api/subscribe',
+            type: 'POST',
+            accepts: 'text',
+            dataType: 'text',
+            data: form.serialize(),
+            success: function (data, status, jqXHR) {
+                var alert = $('.subs-form-alert');
+                alert.addClass('alert-success');
+                alert.removeClass('alert-danger').removeClass('hide');
+                alert.text('Thank you for subscribing.');
+            },
+            error: function (jqXHR, status, err) {
+                var message = 'Something went wrong, please try again.'
+                if (err == 'CONFLICT') {
+                    var message = 'Email address already exists.'
+                }
+                var alert = $('.subs-form-alert');
+                alert.addClass('alert-danger');
+                alert.removeClass('alert-success').removeClass('hide');
+                alert.text(message);
+            }
+        })
+    }).on('error.validator.bv', function(e, data) {
+        // data.bv        --> The BootstrapValidator instance
+        // data.field     --> The field name
+        // data.element   --> The field element
+        // data.validator --> The current validator name
+
+        if (data.field === 'subscribe-email') {
+            // The email field is not valid
+            data.element
+                .data('bv.messages')
+                // Hide all the messages
+                .find('.help-block[data-bv-for="' + data.field + '"]').hide()
+                // Show only message associated with current validator
+                .filter('[data-bv-validator="' + data.validator + '"]').show();
+        }
     });
 
 });

@@ -446,7 +446,6 @@ margin-bottom: 50px;
     font-weight: 300;
     font-size: 200%;
     color: #c9c9c9;
-    
 }
 
 .callus-desc {
@@ -459,23 +458,46 @@ margin-bottom: 50px;
 
 .callus-action {
     font-weight: 700;
-    font-size: 280%;
+    font-size: 200%;
+}
+
+.message-title {
+    background-color: #eef1f2;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 220%;
+    color: #6c6d6d;
 }
 
 .message-wrapper {
     background-color: white;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 50px;
 }
 
-#message-name, #message-email, #message-text {
-    //margin-bottom: 15px;
-    font-size: 120%;
+.subscribe-wrapper {
+    background-color: #eef1f2;
+    padding-top: 40px;
+    padding-bottom: 50px;
 }
 
+.input-group-btn {
+    vertical-align: top;
+}
 
+.subscribe-form .help-block {
+    margin-top: 0;
+}
 
-
+.subscribe-title {
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 220%;
+    color: #6c6d6d;
+}
 /* contact end */
 
 
@@ -569,6 +591,11 @@ margin-bottom: 50px;
         font-size: 200%;
     }
 
+    .callus-action {
+        font-weight: 700;
+        font-size: 280%;
+    }
+
 }
 
 
@@ -622,6 +649,10 @@ margin-bottom: 50px;
 
     .aboutus-desc {
         font-size: 220%;
+    }
+
+    .callus {
+        margin-bottom: 70px;
     }
 
     .callus-title {

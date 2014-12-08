@@ -1,9 +1,13 @@
 from flask import Flask
-from .views import api
+from flask.ext.sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
 app.config.from_object('config')
 
+db = SQLAlchemy(app)
+
+from .views import api
 app.register_blueprint(api)
 
 if not app.config['FROZEN']:

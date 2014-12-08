@@ -1,5 +1,7 @@
 import os
-_basedir = os.path.abspath(os.path.dirname(__file__))
+from os.path import join, abspath, dirname
+
+_basedir = abspath(dirname(__file__))
 
 DEBUG = True
 
@@ -8,7 +10,7 @@ FROZEN = False
 ADMINS = frozenset(['youremail@yourdomain.com'])
 SECRET_KEY = 'This string will be replaced with a proper key.'
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(_basedir, 'app.db')
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + join(_basedir, 'storage.sqlite')
 DATABASE_CONNECT_OPTIONS = {}
 
 THREADS_PER_PAGE = 2

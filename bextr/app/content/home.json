@@ -144,13 +144,13 @@
             "text":"Want to hear the latest from bextr?",
             "action":{
                 "text":"Subscribe",
-                "url":"/contact"
+                "url":"/contact#subscribe"
             }
         },
         "bottom":{
-            "text":"Speak to a live person. Call",
+            "text":"Speak to a live person.",
             "action":{
-                "text":"(888) 605-4866",
+                "text":"Call us.",
                 "url":"/contact"
             }
         }
