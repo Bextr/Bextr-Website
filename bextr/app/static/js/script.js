@@ -208,6 +208,19 @@ $(document).ready(function(){
 
     setCurrentNav();
 
+    if ($(location).attr('pathname') == '/contact') {
+        $.ajax({
+            url: '/api/csrf-token',
+            type: 'GET',
+            accepts: 'text',
+            dataType: 'text',
+            success: function (data, status, jqXHR) {
+                $('#message-csrf_token, #subscribe-csrf_token').attr('value', data)
+            }
+        });
+    }
+
+
     $('.message-form').bootstrapValidator({
         message: 'This value is not valid.',
         feedbackIcons: {
@@ -253,21 +266,27 @@ $(document).ready(function(){
                 }
             }
         }
-    }).on('success.form.bv', function(e){
+    }).on('success.form.bv', function(e) {
         e.preventDefault();
-        var $form = $(e.target);
+        var form = $(e.target);
 
         $.ajax({
             url: '/api/message',
             type: 'POST',
             accepts: 'text',
             dataType: 'text',
-            data: $form.serialize(),
+            data: form.serialize(),
             success: function (data, status, jqXHR) {
-                console.log('success', status);
+                var alert = $('.msg-form-alert');
+                alert.addClass('alert-success');
+                alert.removeClass('alert-danger').removeClass('hide');
+                alert.text('Your message has been successfully sent.')
             },
             error: function (jqXHR, status, err) {
-                console.log('error', status, err);
+                var alert = $('.msg-form-alert');
+                alert.addClass('alert-danger');
+                alert.removeClass('alert-success').removeClass('hide');
+                alert.text('Something went wrong, please try again.')
             }
         })
     });
