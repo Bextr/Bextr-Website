@@ -3,25 +3,25 @@
     "products":[
         {
             "title":"Indoor Kiosks",
-            "img":"svg/indoor_kiosk.svg",
+            "file":"svg/indoor_kiosk.svg",
             "url":"/touchscreens/indoor-kiosks",
             "desc":""
         },
         {
             "title":"Outdoor Kiosks",
-            "img":"svg/outdoor_kiosk.svg",
+            "file":"svg/outdoor_kiosk.svg",
             "url":"/touchscreens/outdoor-kiosks",
             "desc":""
         },
         {
             "title":"Touch Tables",
-            "img":"svg/touch_table.svg",
+            "file":"svg/touch_table.svg",
             "url":"/touchscreens/touch-tables",
             "desc":""
         },
         {
             "title":"Touch Windows",
-            "img":"svg/touch_window.svg",
+            "file":"svg/touch_window.svg",
             "url":"/touchscreens/touch-windows",
             "desc":""
         }

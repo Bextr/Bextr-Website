@@ -3,13 +3,13 @@
     "products":[
         {
             "title":"Indoor Signage",
-            "img":"svg/indoor_kiosk.svg",
+            "file":"svg/indoor_kiosk.svg",
             "url":"/signage/indoor-signage",
             "desc":""
         },
         {
             "title":"Outdoor Signage",
-            "img":"svg/outdoor_kiosk.svg",
+            "file":"svg/outdoor_kiosk.svg",
             "url":"/signage/outdoor-signage",
             "desc":""
         }

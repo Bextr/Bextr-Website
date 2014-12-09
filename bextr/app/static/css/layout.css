@@ -221,7 +221,7 @@ ul {
     height: 150px;
 }
 
-.sec-slide-title, .sec-slide-copy, .sec-slide-action {
+.sec-slide-title, .sec-slide-text, .sec-slide-action {
     text-align: center;
 }
 
@@ -232,7 +232,7 @@ ul {
     font-weight: 400;
 }
 
-.sec-slide-copy {
+.sec-slide-text {
     margin-top: 10px;
     font-size: 150%;
     color: #424242;
@@ -272,7 +272,7 @@ ul {
     color: #c9c9c9;
 }
 
-.slide-copy {
+.slide-text {
     font-size: 150%;
     color: #878787;
     line-height: 1.2;
@@ -390,7 +390,7 @@ ul {
     margin-bottom: 30px;
 }
 
-.aboutus-desc {
+.aboutus-text {
     font-weight: 100;
     font-size: 160%;
     color: #bababa;
@@ -426,7 +426,7 @@ margin-bottom: 50px;
     font-size: 160%;
 }
 
-.member-desc {
+.member-text {
     color: #6c6d6d;
     font-weight: 300;
     font-size: 160%;
@@ -548,7 +548,7 @@ margin-bottom: 50px;
         font-size: 320%;
     }
 
-    .slide-copy {
+    .slide-text {
         font-size: 155%;
         margin-top: 12%;
     }
@@ -575,7 +575,7 @@ margin-bottom: 50px;
         margin-bottom: 30px;
     }
 
-    .aboutus-desc {
+    .aboutus-text {
         font-size: 200%;
     }
 
@@ -625,7 +625,7 @@ margin-bottom: 50px;
         font-size: 420%;
     }
 
-    .slide-copy {
+    .slide-text {
         font-size: 187%;
         margin-top: 15%;
     }
@@ -647,7 +647,7 @@ margin-bottom: 50px;
         margin-bottom: 50px;
     }
 
-    .aboutus-desc {
+    .aboutus-text {
         font-size: 220%;
     }
 
@@ -679,7 +679,7 @@ margin-bottom: 50px;
         font-size: 500%;
     }
 
-    .slide-copy {
+    .slide-text {
         font-size: 210%;
     }
 

@@ -7,6 +7,9 @@ DEBUG = True
 
 FROZEN = False
 
+FREEZER_DESTINATION = join(_basedir, 'build')
+FREEZER_DEFAULT_MIMETYPE = 'text/html'
+
 ADMINS = frozenset(['youremail@yourdomain.com'])
 SECRET_KEY = 'This string will be replaced with a proper key.'
 

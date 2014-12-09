@@ -28,7 +28,7 @@
                         <div class="slide-txt">
                             <div class="slide-txt-wrapper">
                                 <div class="slide-title">{{ item.title }}</div>
-                                <div class="slide-copy">{{ item.text }}</div>
+                                <div class="slide-text">{{ item.text }}</div>
                                 <div class="slide-action">
                                     <a href="{{ item.action.url }}">{{ item.action.text }}</a>
                                 </div>
@@ -60,7 +60,7 @@
                             </div>
                         </a>
                         <div class="sec-slide-title">{{ item.title }}</div>
-                        <div class="sec-slide-copy">{{ item.text }}</div>
+                        <div class="sec-slide-text">{{ item.text }}</div>
                         <div class="sec-slide-action">
                             <a class="{{ lightbox_setter(item.action.lightbox) }}" href="{{ item.action.url }}">{{ item.action.text }}</a>
                         </div>
@@ -79,7 +79,7 @@
                     <div>
                         <a href="{{ item.url }}">
                             <div class="product-slide-img">
-                                <img class="fit-center" src="{{ url_for('static', filename=item.img) }}" alt="{{ item.desc }}">
+                                <img class="fit-center" src="{{ url_for('static', filename=item.file) }}" alt="{{ item.desc }}">
                             </div>
                             <div class="product-slide-title">{{ item.title }}</div>
                         </a>

@@ -23,8 +23,8 @@
     "team":[
         {
             "name":"Jerald Evans",
-            "title":"Title",
-            "desc":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
+            "position":"Title",
+            "text":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
             "img":{
                 "file":"img/team_member_1.png",
                 "desc":""
@@ -32,8 +32,8 @@
         },
         {
             "name":"Claire Harmon",
-            "title":"Title",
-            "desc":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
+            "position":"Title",
+            "text":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
             "img":{
                 "file":"img/team_member_1.png",
                 "desc":""
@@ -41,8 +41,8 @@
         },
         {
             "name":"Cindy Greer",
-            "title":"Title",
-            "desc":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
+            "position":"Title",
+            "text":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
             "img":{
                 "file":"img/team_member_1.png",
                 "desc":""
@@ -50,8 +50,8 @@
         },
         {
             "name":"Willis Ballard",
-            "title":"Title",
-            "desc":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
+            "position":"Title",
+            "text":"Sed ut perspiciatis unde omnis iste natus error sit accusantium doloremque laudantium, totam rem aperiam, ipsa quae ab illo inventore veritatis et quasi vitae.",
             "img":{
                 "file":"img/team_member_1.png",
                 "desc":""

@@ -14,6 +14,7 @@ api = Blueprint('api', __name__)
 
 _s = db.session
 
+
 @api.route('/api/csrf-token', methods=['GET'])
 def v_csrf():
     return Form().generate_csrf_token()
