@@ -1,6 +1,7 @@
 import json
 from os.path import join, abspath
 
+
 cont_dir = abspath('app/content')
 
 

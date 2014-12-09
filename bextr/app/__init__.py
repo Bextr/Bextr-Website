@@ -7,13 +7,12 @@ app.config.from_object('config')
 
 db = SQLAlchemy(app)
 
-from .views import api
-app.register_blueprint(api)
+if not app.config['FREEZING_SITE']:
+    from .views import api
+    app.register_blueprint(api)
 
-if not app.config['FROZEN']:
-    from flask_bootstrap import Bootstrap
+if not app.config['FROZEN_SITE']:
     from .views import home, touchscreens, signage, about, contact
-    Bootstrap(app)
     app.register_blueprint(home)
     app.register_blueprint(touchscreens)
     app.register_blueprint(signage)

@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from ..content import c_global, c_about
+from app.content import c_global, c_about
 
 
 about = Blueprint('about', __name__)

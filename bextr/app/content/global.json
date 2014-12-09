@@ -8,11 +8,11 @@
         "menu":[
             {
                 "text":"TOUCHSCREENS",
-                "url":"/touchscreens"
+                "url":"/touchscreens/"
             },
             {
                 "text":"SIGNAGE",
-                "url":"/signage"
+                "url":"/signage/"
             },
             {
                 "text":"ABOUT",

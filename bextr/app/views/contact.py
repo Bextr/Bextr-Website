@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
-from ..content import c_global, c_contact
-from ..forms import MessageForm, SubscribeForm
+from app.content import c_global, c_contact
+from app.forms import MessageForm, SubscribeForm
 
 
 contact = Blueprint('contact', __name__)

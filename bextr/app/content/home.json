@@ -7,11 +7,11 @@
                 "text":"Accept orders, receive payments from unmanned tablet stations",
                 "action":{
                     "text":"Learn more",
-                    "url":"/signage"
+                    "url":"/signage/"
                 },
                 "img":{
                     "file":"img/img_1.png",
-                    "url":"/signage",
+                    "url":"/signage/",
                     "desc":""
                 }
             },
@@ -20,11 +20,11 @@
                 "text":"Accept orders, receive payments from unmanned tablet stations",
                 "action":{
                     "text":"Learn more",
-                    "url":"/touchscreens"
+                    "url":"/touchscreens/"
                 },
                 "img":{
                     "file":"img/img_2.png",
-                    "url":"/touchscreens",
+                    "url":"/touchscreens/",
                     "desc":""
                 }
             }
@@ -79,7 +79,7 @@
                 "text":"Lorem ipsum dolor sit amet",
                 "action":{
                     "text":"Learn more",
-                    "url":"/touchscreens",
+                    "url":"/touchscreens/",
                     "lightbox":{
                         "enabled":false,
                         "is_video":false
@@ -87,7 +87,7 @@
                 },
                 "img":{
                     "file":"img/img_2.png",
-                    "url":"/touchscreens",
+                    "url":"/touchscreens/",
                     "desc":"",
                     "lightbox":{
                         "enabled":false,
@@ -100,7 +100,7 @@
                 "text":"Lorem ipsum dolor sit amet",
                 "action":{
                     "text":"Learn more",
-                    "url":"/touchscreens",
+                    "url":"/touchscreens/",
                     "lightbox":{
                         "enabled":false,
                         "is_video":false
@@ -108,7 +108,7 @@
                 },
                 "img":{
                     "file":"img/img_2.png",
-                    "url":"/touchscreens",
+                    "url":"/touchscreens/",
                     "desc":"",
                     "lightbox":{
                         "enabled":false,
@@ -121,7 +121,7 @@
                 "text":"Lorem ipsum dolor sit amet",
                 "action":{
                     "text":"Learn more",
-                    "url":"/touchscreens",
+                    "url":"/touchscreens/",
                     "lightbox":{
                         "enabled":false,
                         "is_video":false
@@ -129,7 +129,7 @@
                 },
                 "img":{
                     "file":"img/img_2.png",
-                    "url":"/touchscreens",
+                    "url":"/touchscreens/",
                     "desc":"",
                     "lightbox":{
                         "enabled":false,

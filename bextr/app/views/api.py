@@ -1,7 +1,7 @@
 from flask import Blueprint, abort
 from flask_wtf import Form
 from time import time
-from ..forms import MessageForm, SubscribeForm
+from app.forms import MessageForm, SubscribeForm
 from app.models import Subscriber
 from app import db
 

@@ -5,7 +5,8 @@ _basedir = abspath(dirname(__file__))
 
 DEBUG = True
 
-FROZEN = False
+FREEZING_SITE = bool(int(os.getenv('FREEZING_SITE', '0')))
+FROZEN_SITE = False
 
 FREEZER_DESTINATION = join(_basedir, 'build')
 FREEZER_DEFAULT_MIMETYPE = 'text/html'
