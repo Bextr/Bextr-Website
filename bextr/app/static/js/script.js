@@ -1,13 +1,14 @@
 String.prototype.insertAt = function (index, string) {
-  if (index > 0)
-    return this.substring(0, index) + string + this.substring(index, this.length);
-  else
-    return string + this;
+    if (index > 0) {
+        return this.substring(0, index) + string + this.substring(index, this.length);
+    }
+    else {
+        return string + this;
+    }
 };
 
-
-function fitCenter(){
-      $('.fit-center').each(function(){
+function fitCenter() {
+      $('.fit-center').each(function() {
             $(this).position({
                 my: 'center',
                 at: 'center',
@@ -16,20 +17,13 @@ function fitCenter(){
         });
 }
 
-
-function setMember(){
-
-        $('.team-member').each(function(index){
+function setMember() {
+        $('.team-member').each(function(index) {
             var img = $(this).find('.member-img');
             var txt = $(this).find('.member-txt');
             if(Modernizr.mq('(min-width: 768px)')) {
-                img.css('height', 'initial');
-                txt.css('height', 'initial');
-                var heightImg = img.height();
-                var heightTxt = txt.height();
-                var maxHeight = Math.max(heightImg, heightTxt);
-                img.height(maxHeight);
-                txt.height(maxHeight);
+                $(img, txt).css('height', 'initial');
+                $(img, txt).height(Math.max(img.height(), txt.height()));
                 if(index % 2 == 0) {
                     txt.css('text-align', 'left');
                 }
@@ -67,18 +61,15 @@ function setCurrentNav() {
     });
 }
 
-
 function setCurrentProductNavImg(item) {
-    var imgPath = $(item).attr('src')
+    var imgPath = $(item).attr('src');
     var dotIndex = imgPath.lastIndexOf('.');
     $(item).attr('src', imgPath.insertAt(dotIndex, '_current'));
 }
 
 function unsetCurrentProductNavImg(item) {
-    var imgPath = $(item).attr('src')
-    $(item).attr('src', imgPath.replace('_current', ''));
+    $(item).attr('src', $(item).attr('src').replace('_current', ''));
 }
-
 
 $(document).ready(function(){
 
@@ -116,8 +107,6 @@ $(document).ready(function(){
 
     var sec_slide_count = $('.sec-carousel > div').length;
     $('.sec-carousel').slick({
-        //dots: true,
-        infinite: true,
         slidesToShow: Math.min(sec_slide_count, 3),
         slidesToScroll: Math.min(sec_slide_count, 3),
         responsive: [
@@ -139,8 +128,6 @@ $(document).ready(function(){
     });
 
     $('.product-carousel').slick({
-        //dots: true,
-        infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [
@@ -170,7 +157,6 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 10000,
         pauseOnHover: true,
-        //fade: true,
         responsive: [
             {
                 breakpoint: 970,
@@ -191,14 +177,13 @@ $(document).ready(function(){
 
     $('a.image-gallery').colorbox({
         opacity: 0.5,
-        rel: 'group1',
+        rel: 'group-1',
         maxWidth: '90%',
         maxHeight: '90%',
     });
 
     $('a.video-gallery').colorbox({
         opacity: 0.5,
-        rel: 'group2',
         iframe: true,
         maxWidth: '90%',
         maxHeight: '90%',
@@ -208,18 +193,18 @@ $(document).ready(function(){
 
     setCurrentNav();
 
-    if ($(location).attr('pathname') == '/contact') {
+    if ($(location).attr('pathname') === '/contact') {
         $.ajax({
             url: '/api/csrf-token',
             type: 'GET',
             accepts: 'text',
             dataType: 'text',
             success: function (data, status, jqXHR) {
-                $('#message-csrf_token, #subscribe-csrf_token').attr('value', data)
+                $('#message-csrf_token, #subscribe-csrf_token')
+                    .attr('value', data);
             }
         });
     }
-
 
     $('.message-form').bootstrapValidator({
         message: 'This value is not valid.',
@@ -247,6 +232,11 @@ $(document).ready(function(){
                     notEmpty: {
                         message: 'The email is required and cannot be empty.'
                     },
+                    stringLength: {
+                        min: 1,
+                        max: 200,
+                        message: 'The email must be more than 1 and less than 200 characters long.'
+                    },
                     emailAddress: {
                         message: 'The input is not a valid email address.'
                     },
@@ -272,40 +262,32 @@ $(document).ready(function(){
         }
     }).on('success.form.bv', function(e) {
         e.preventDefault();
-        var form = $(e.target);
-
         $.ajax({
             url: '/api/message',
             type: 'POST',
             accepts: 'text',
             dataType: 'text',
-            data: form.serialize(),
+            data: $(e.target).serialize(),
             success: function (data, status, jqXHR) {
-                var alert = $('.msg-form-alert');
-                alert.addClass('alert-success');
-                alert.removeClass('alert-danger').removeClass('hide');
-                alert.text('Your message has been successfully sent.')
+                $('.msg-form-alert')
+                    .addClass('alert-success')
+                    .removeClass('alert-danger')
+                    .removeClass('hide')
+                    .text('Your message has been successfully sent.');
             },
             error: function (jqXHR, status, err) {
-                var alert = $('.msg-form-alert');
-                alert.addClass('alert-danger');
-                alert.removeClass('alert-success').removeClass('hide');
-                alert.text('Something went wrong, please try again.')
+                $('.msg-form-alert')
+                    .addClass('alert-danger')
+                    .removeClass('alert-success')
+                    .removeClass('hide')
+                    .text('Something went wrong, please try again.');
             }
         })
     }).on('error.validator.bv', function(e, data) {
-        // data.bv        --> The BootstrapValidator instance
-        // data.field     --> The field name
-        // data.element   --> The field element
-        // data.validator --> The current validator name
-
         if (data.field === 'message-email') {
-            // The email field is not valid
             data.element
                 .data('bv.messages')
-                // Hide all the messages
                 .find('.help-block[data-bv-for="' + data.field + '"]').hide()
-                // Show only message associated with current validator
                 .filter('[data-bv-validator="' + data.validator + '"]').show();
         }
     });
@@ -323,6 +305,11 @@ $(document).ready(function(){
                     notEmpty: {
                         message: 'The email is required and cannot be empty.'
                     },
+                    stringLength: {
+                        min: 1,
+                        max: 200,
+                        message: 'The email must be more than 1 and less than 200 characters long.'
+                    },
                     emailAddress: {
                         message: 'The input is not a valid email address.'
                     },
@@ -335,50 +322,41 @@ $(document).ready(function(){
         }
     }).on('success.form.bv', function(e) {
         e.preventDefault();
-        var form = $(e.target);
-
         $.ajax({
             url: '/api/subscribe',
             type: 'POST',
             accepts: 'text',
             dataType: 'text',
-            data: form.serialize(),
+            data: $(e.target).serialize(),
             success: function (data, status, jqXHR) {
-                var alert = $('.subs-form-alert');
-                alert.addClass('alert-success');
-                alert.removeClass('alert-danger').removeClass('hide');
-                alert.text('Thank you for subscribing.');
+                $('.subs-form-alert')
+                    .addClass('alert-success')
+                    .removeClass('alert-danger')
+                    .removeClass('hide')
+                    .text('Thank you for subscribing.');
             },
             error: function (jqXHR, status, err) {
                 var message = 'Something went wrong, please try again.'
-                if (err == 'CONFLICT') {
-                    var message = 'Email address already exists.'
+                if (err === 'CONFLICT') {
+                    var message = 'Email address already subscribed.';
                 }
-                var alert = $('.subs-form-alert');
-                alert.addClass('alert-danger');
-                alert.removeClass('alert-success').removeClass('hide');
-                alert.text(message);
+                $('.subs-form-alert')
+                    .addClass('alert-danger')
+                    .removeClass('alert-success')
+                    .removeClass('hide')
+                    .text(message);
             }
         })
     }).on('error.validator.bv', function(e, data) {
-        // data.bv        --> The BootstrapValidator instance
-        // data.field     --> The field name
-        // data.element   --> The field element
-        // data.validator --> The current validator name
-
         if (data.field === 'subscribe-email') {
-            // The email field is not valid
             data.element
                 .data('bv.messages')
-                // Hide all the messages
                 .find('.help-block[data-bv-for="' + data.field + '"]').hide()
-                // Show only message associated with current validator
                 .filter('[data-bv-validator="' + data.validator + '"]').show();
         }
     });
 
 });
-
 
 $(window).load(function() {
 

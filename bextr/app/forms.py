@@ -11,8 +11,8 @@ class MessageForm(Form):
 
     email = StringField('email', validators=[
                         InputRequired(),
-                        Email(),
-                        Length(min=1, max=200)])
+                        Length(min=1, max=200),
+                        Email()])
 
     text = TextAreaField('text', validators=[
                          InputRequired(),
@@ -23,5 +23,5 @@ class SubscribeForm(Form):
 
     email = StringField('email', validators=[
                         InputRequired(),
-                        Email(),
-                        Length(max=200)])
+                        Length(min=1, max=200),
+                        Email()])
