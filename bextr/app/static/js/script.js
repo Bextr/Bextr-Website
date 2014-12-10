@@ -41,7 +41,7 @@ function setMember() {
 
 function setCurrentNav() {
     var path = window.location.pathname;
-    path = path.replace(/\/$/, '');
+    //path = path.replace(/\/$/, '');
     path = decodeURIComponent(path);
 
     $('.navbar-nav a, .footer-menu a').each(function () {
@@ -72,14 +72,6 @@ function unsetCurrentProductNavImg(item) {
 }
 
 $(document).ready(function(){
-
-    // swap svg with png if svg is not supported
-    // http://caniuse.com/#feat=svg-img
-    if(!Modernizr.svgasimg) {
-        $('img[src$=svg]').each(function() {
-            $(this).attr('src').replace('.svg', '.png');
-        });
-    }
 
     $('.product-carousel a').hover(
         function() {
@@ -190,8 +182,6 @@ $(document).ready(function(){
         innerWidth: 640,
         innerHeight: 390
     });
-
-    setCurrentNav();
 
     if ($(location).attr('pathname') === '/contact') {
         $.ajax({
@@ -360,11 +350,23 @@ $(document).ready(function(){
 
 $(window).load(function() {
 
+    // swap svg with png if svg is not supported
+    // http://caniuse.com/#feat=svg-img
+    Modernizr.addTest('svgasimg', document.implementation
+        .hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1'));
+    if(!Modernizr.svgasimg) {
+        $('img[src$=svg]').each(function() {
+            $(this).attr('src', $(this).attr('src').replace('.svg', '.png'));
+        });
+    }
+
+    setCurrentNav();
+
     setMember();
 
     fitCenter();
 
-    $('.product-carousel, .main-carousel').animate({'opacity': 1}, 100);
+    $('.fit-center').animate({'opacity': 1}, 100);
 
     $(window).resize(function() {
         fitCenter();

@@ -36,6 +36,7 @@ ul {
     height: auto;
     max-width: 100%;
     max-height: 100%;
+    opacity: 0;
 }
 
 .hide {
@@ -183,7 +184,6 @@ ul {
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: initial;
-    opacity: 0;
 }
 
 .product-slide-img {
@@ -252,7 +252,6 @@ ul {
 .main-carousel {
     padding-top: 30px;
     padding-bottom: 30px;
-    opacity: 0;
 }
 
 .slide-img {
