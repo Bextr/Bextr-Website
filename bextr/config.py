@@ -18,5 +18,17 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///' + join(_basedir, 'storage.sqlite')
 FREEZER_DESTINATION = join(_basedir, 'build')
 FREEZER_DEFAULT_MIMETYPE = 'text/html'
 
+MAIL_SERVER = 'localhost'
+MAIL_PORT = 25
+MAIL_USE_TLS = False
+MAIL_USE_SSL = False
+MAIL_DEBUG = False
+MAIL_USERNAME = None
+MAIL_PASSWORD = None
+MAIL_DEFAULT_SENDER = 'forwarder@bextr.com'
+MAIL_MAX_EMAILS = None
+MAIL_SUPPRESS_SEND = False
+MAIL_ASCII_ATTACHMENTS = False
+
 FROZEN_SITE = False
 FREEZING_SITE = int(os.getenv('FREEZING_SITE', '0'))

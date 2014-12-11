@@ -1,9 +1,10 @@
 from flask import Blueprint, abort
 from flask_wtf import Form
+from flask_mail import Message
 from time import time
 from app.forms import MessageForm, SubscribeForm
 from app.models import Subscriber
-from app import db
+from app import db, mail
 
 
 def epoch():
@@ -25,6 +26,11 @@ def v_message():
     form = MessageForm(prefix='message')
 
     if form.validate_on_submit():
+        msg = Message('Message from ' + form.name.data,
+                      recipients=['contact@bextr.com'],
+                      reply_to=form.email.data,
+                      body=form.text.data)
+        mail.send(msg)
         print(form.name.data, form.email.data, form.text.data)
         return '', 204
     abort(400)

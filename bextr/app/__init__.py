@@ -1,11 +1,12 @@
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
-
+from flask_mail import Mail
 
 app = Flask(__name__)
 app.config.from_object('config')
 
 db = SQLAlchemy(app)
+mail = Mail(app)
 
 if not app.config['FREEZING_SITE']:
     from app.views import api
