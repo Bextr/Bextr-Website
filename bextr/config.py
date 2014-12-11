@@ -30,7 +30,7 @@ MAIL_MAX_EMAILS = None
 MAIL_SUPPRESS_SEND = False
 MAIL_ASCII_ATTACHMENTS = False
 
-MAIL_FORWARD_TO = ['zauvareo@zoho.com']
+MAIL_FORWARD_TO = ['contact@bextr.com']
 
 FROZEN_SITE = False
 FREEZING_SITE = int(os.getenv('FREEZING_SITE', '0'))
