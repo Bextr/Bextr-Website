@@ -4,7 +4,7 @@ from flask_mail import Message
 from time import time
 from app.forms import MessageForm, SubscribeForm
 from app.models import Subscriber
-from app import db, mail
+from app import app, db, mail
 
 
 def epoch():
@@ -27,11 +27,10 @@ def v_message():
 
     if form.validate_on_submit():
         msg = Message('Message from ' + form.name.data,
-                      recipients=['contact@bextr.com'],
+                      recipients=app.config['MAIL_FORWARD_TO'],
                       reply_to=form.email.data,
                       body=form.text.data)
         mail.send(msg)
-        print(form.name.data, form.email.data, form.text.data)
         return '', 204
     abort(400)
 
