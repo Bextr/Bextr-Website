@@ -1,4 +1,4 @@
-from flask import Blueprint, abort
+from flask import Blueprint, abort, escape
 from flask_wtf import Form
 from flask_mail import Message
 from time import time
@@ -26,10 +26,10 @@ def v_message():
     form = MessageForm(prefix='message')
 
     if form.validate_on_submit():
-        msg = Message('Message from ' + form.name.data,
+        msg = Message('Message from ' + escape(form.name.data),
                       recipients=app.config['MAIL_FORWARD_TO'],
-                      reply_to=form.email.data,
-                      body=form.text.data)
+                      reply_to=escape(form.email.data),
+                      body=escape(form.text.data))
         mail.send(msg)
         return '', 204
     abort(400)
@@ -40,7 +40,7 @@ def v_subscribe():
     form = SubscribeForm(prefix='subscribe')
 
     if form.validate_on_submit():
-        email = form.email.data
+        email = escape(form.email.data)
         if not _s.query(Subscriber).filter(Subscriber.email == email).first():
             subs = Subscriber(epoch=epoch(), email=email)
             _s.add(subs)

@@ -41,39 +41,57 @@ function setMember() {
 
 }
 
-function setCurrentNav() {
-    var path = window.location.pathname;
-    //path = path.replace(/\/$/, '');
-    path = decodeURIComponent(path);
+function preloadImage(src) {
+        $('<img/>').attr('src', src).css('display', 'none').appendTo('body');
+    }
 
-    $('.navbar-nav a, .footer-menu a').each(function () {
-        var href = $(this).attr('href');
-        if (path.substring(0, href.length) === href) {
+function setCurrentNav() {
+
+    $('.navbar-nav a, .footer-menu a, .product-carousel a').each(function () {
+        var href = this.href;
+        if (window.location.href.substring(0, href.length) === href) {
             $(this).addClass('current');
         }
     });
 
     $('.product-carousel a').each(function () {
-        var href = $(this).attr('href');
-        if (path.substring(0, href.length) === href) {
-            $(this).addClass('current');
-            setCurrentProductNavImg($(this).find('img'));
+        var img = $(this).find('img');
+        preloadImage(getCurrentProductNavImgSrc(img))
+        if ($(this).hasClass('current')) {
+            setCurrentProductNavImg(img);
             $('.product-carousel').slickGoTo($(this).parent().attr('index'));
         }
     });
 }
 
-function setCurrentProductNavImg(item) {
+function getCurrentProductNavImgSrc(item) {
     var imgPath = $(item).attr('src').replace('_current', '');
     var dotIndex = imgPath.lastIndexOf('.');
-    $(item).attr('src', imgPath.insertAt(dotIndex, '_current'));
+    return imgPath.insertAt(dotIndex, '_current');
+}
+
+function setCurrentProductNavImg(item) {
+    $(item).attr('src', getCurrentProductNavImgSrc(item));
 }
 
 function unsetCurrentProductNavImg(item) {
     $(item).attr('src', $(item).attr('src').replace('_current', ''));
 }
 
+
+
+
 $(document).ready(function(){
+
+    // swap svg with png if svg is not supported
+    // http://caniuse.com/#feat=svg-img
+    Modernizr.addTest('svgasimg', document.implementation
+        .hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1'));
+    if(!Modernizr.svgasimg) {
+        $('img[src$=svg]').each(function() {
+            $(this).attr('src', $(this).attr('src').replace('.svg', '.png'));
+        });
+    }
 
     $('.product-carousel a').hover(
         function() {
@@ -184,19 +202,6 @@ $(document).ready(function(){
         innerWidth: 640,
         innerHeight: 390
     });
-
-    if ($(location).attr('pathname') === '/contact') {
-        $.ajax({
-            url: '/api/csrf-token',
-            type: 'GET',
-            accepts: 'text',
-            dataType: 'text',
-            success: function (data, status, jqXHR) {
-                $('#message-csrf_token, #subscribe-csrf_token')
-                    .attr('value', data);
-            }
-        });
-    }
 
     if ($().bootstrapValidator) {
         $('.message-form').bootstrapValidator({
@@ -358,13 +363,16 @@ $(document).ready(function(){
 
 $(window).load(function() {
 
-    // swap svg with png if svg is not supported
-    // http://caniuse.com/#feat=svg-img
-    Modernizr.addTest('svgasimg', document.implementation
-        .hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1'));
-    if(!Modernizr.svgasimg) {
-        $('img[src$=svg]').each(function() {
-            $(this).attr('src', $(this).attr('src').replace('.svg', '.png'));
+    if ($(location).attr('pathname') === '/contact') {
+        $.ajax({
+            url: '/api/csrf-token',
+            type: 'GET',
+            accepts: 'text',
+            dataType: 'text',
+            success: function (data, status, jqXHR) {
+                $('#message-csrf_token, #subscribe-csrf_token')
+                    .attr('value', data);
+            }
         });
     }
 

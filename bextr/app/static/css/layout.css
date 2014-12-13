@@ -187,7 +187,6 @@ ul {
     margin-bottom: 40px;
 }
 
-
 .client-img {
     width: 100%;
     height: 50px;
@@ -198,35 +197,32 @@ ul {
 
 /* product carousel start */
 .product-carousel-wrapper {
-    background-color: #363B3D;
+    background-color: #2F3335;
     margin-top: 15px;
-    -moz-box-shadow:    inset  0  8px 8px -8px rgba(0,0,0,0.4), 
-                        inset  0 -8px 8px -8px rgba(0,0,0,0.4);
-    -webkit-box-shadow: inset  0  8px 8px -8px rgba(0,0,0,0.4), 
-                        inset  0 -8px 8px -8px rgba(0,0,0,0.4);
-     box-shadow:        inset  0  8px 8px -8px rgba(0,0,0,0.4), 
-                        inset  0 -8px 8px -8px rgba(0,0,0,0.4);
+    border-top: 1px solid #34383A;
+    border-bottom: 1px solid #34383A;
 }
 
 .product-carousel {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 5px;
     margin-bottom: 0;
 }
 
 .product-slide-img {
     width: 100%;
-    height: 60px;
+    height: 40px;
 }
 
 .product-slide-title {
     text-align: center;
     font-size: 120%;
     font-weight: 700;
+    padding-top: 3px;
 }
 
 .product-carousel a, .product-carousel a:visited {
-    color: #989898;
+    color: #636566;
 }
 
 .product-carousel a:hover,
@@ -584,11 +580,6 @@ margin-bottom: 50px;
         font-size: 155%;
     }
 
-    .product-slide-title {
-        font-size: 140%;
-    }
-
-
     .aboutus {
         margin-top: 50px;
     }
@@ -659,10 +650,6 @@ margin-bottom: 50px;
 
     .slide-action {
         font-size: 187%;
-    }
-
-    .product-slide-title {
-        font-size: 150%;
     }
 
     .description {

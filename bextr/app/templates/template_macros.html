@@ -76,17 +76,21 @@
 {%- macro product_crs(cont) %}
         <div class="product-carousel-wrapper">
             <div class="container">
-                <div class="product-carousel">
-                {%- for item in cont %}
-                    <div>
-                        <a href="{{ item.url }}">
-                            <div class="product-slide-img">
-                                <img class="fit-center center-block" src="{{ url_for('static', filename=item.file) }}" alt="{{ item.desc }}">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                        <div class="product-carousel">
+                        {%- for item in cont %}
+                            <div>
+                                <a href="{{ item.url }}">
+                                    <div class="product-slide-img">
+                                        <img class="fit-center center-block" src="{{ url_for('static', filename=item.file) }}" alt="{{ item.desc }}">
+                                    </div>
+                                    <div class="product-slide-title">{{ item.title }}</div>
+                                </a>
                             </div>
-                            <div class="product-slide-title">{{ item.title }}</div>
-                        </a>
+                        {%- endfor %}
+                        </div>
                     </div>
-                {%- endfor %}
                 </div>
             </div>
         </div>
