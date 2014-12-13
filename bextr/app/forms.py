@@ -5,23 +5,23 @@ from wtforms.validators import InputRequired, Email, Length
 
 class MessageForm(Form):
 
-    name = StringField('name', validators=[
+    name = StringField('Name', validators=[
                        InputRequired(),
                        Length(min=1, max=200)])
 
-    email = StringField('email', validators=[
+    email = StringField('Email', validators=[
                         InputRequired(),
                         Length(min=1, max=200),
                         Email()])
 
-    text = TextAreaField('text', validators=[
+    text = TextAreaField('Message', validators=[
                          InputRequired(),
                          Length(min=1, max=500)])
 
 
 class SubscribeForm(Form):
 
-    email = StringField('email', validators=[
+    email = StringField('Email', validators=[
                         InputRequired(),
                         Length(min=1, max=200),
                         Email()])

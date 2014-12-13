@@ -8,11 +8,11 @@ String.prototype.insertAt = function (index, string) {
 };
 
 function fitCenter() {
-      $('.fit-center').each(function() {
+        $('.fit-center').each(function() {
             $(this).position({
                 my: 'center',
                 at: 'center',
-                of: $(this).parent(),
+                of: $(this).parent()
              });
         });
 }
@@ -21,8 +21,9 @@ function setMember() {
         $('.team-member').each(function(index) {
             var img = $(this).find('.member-img');
             var txt = $(this).find('.member-txt');
-            if(Modernizr.mq('(min-width: 768px)')) {
-                $(img, txt).css('height', 'initial');
+            if ((Modernizr.mq('only all') && Modernizr.mq('(min-width: 768px)'))
+                || (!Modernizr.mq('only all') && document.body.clientWidth >= 768)) {
+                $(img, txt).css('height', 'auto');
                 $(img, txt).height(Math.max(img.height(), txt.height()));
                 if(index % 2 == 0) {
                     txt.css('text-align', 'left');
@@ -32,8 +33,9 @@ function setMember() {
                 }
             }
             else {
+                console.log('bla');
                 img.css('height', '150px');
-                txt.css({'height': 'initial', 'text-align': 'center'});
+                txt.css({'height': 'auto', 'text-align': 'center'});
             }
         });
 
@@ -62,7 +64,7 @@ function setCurrentNav() {
 }
 
 function setCurrentProductNavImg(item) {
-    var imgPath = $(item).attr('src');
+    var imgPath = $(item).attr('src').replace('_current', '');
     var dotIndex = imgPath.lastIndexOf('.');
     $(item).attr('src', imgPath.insertAt(dotIndex, '_current'));
 }
@@ -196,155 +198,161 @@ $(document).ready(function(){
         });
     }
 
-    $('.message-form').bootstrapValidator({
-        message: 'This value is not valid.',
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            'message-name': {
-                message: 'The input is not valid.',
-                validators: {
-                    notEmpty: {
-                        message: 'The name is required and cannot be empty.'
-                    },
-                    stringLength: {
-                        min: 1,
-                        max: 200,
-                        message: 'The name must be more than 1 and less than 200 characters long.'
-                    }
-                }
+    if ($().bootstrapValidator) {
+        $('.message-form').bootstrapValidator({
+            message: 'This value is not valid.',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
             },
-            'message-email': {
-                validators: {
-                    notEmpty: {
-                        message: 'The email is required and cannot be empty.'
-                    },
-                    stringLength: {
-                        min: 1,
-                        max: 200,
-                        message: 'The email must be more than 1 and less than 200 characters long.'
-                    },
-                    emailAddress: {
-                        message: 'The input is not a valid email address.'
-                    },
-                    regexp: {
-                        regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
-                        message: 'The input is not a valid email address.'
+            fields: {
+                'message-name': {
+                    message: 'The input is not valid.',
+                    validators: {
+                        notEmpty: {
+                            message: 'The name is required and cannot be empty.'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 200,
+                            message: 'The name must be more than 1 and less than 200 characters long.'
+                        }
                     }
-                }
-            },
-            'message-text': {
-                message: 'The input is not valid.',
-                validators: {
-                    notEmpty: {
-                        message: 'The message is required and cannot be empty.'
-                    },
-                    stringLength: {
-                        min: 1,
-                        max: 500,
-                        message: 'The message must be more than 1 and less than 500 characters long.'
+                },
+                'message-email': {
+                    validators: {
+                        notEmpty: {
+                            message: 'The email is required and cannot be empty.'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 200,
+                            message: 'The email must be more than 1 and less than 200 characters long.'
+                        },
+                        emailAddress: {
+                            message: 'The input is not a valid email address.'
+                        },
+                        regexp: {
+                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                            message: 'The input is not a valid email address.'
+                        }
+                    }
+                },
+                'message-text': {
+                    message: 'The input is not valid.',
+                    validators: {
+                        notEmpty: {
+                            message: 'The message is required and cannot be empty.'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 500,
+                            message: 'The message must be more than 1 and less than 500 characters long.'
+                        }
                     }
                 }
             }
-        }
-    }).on('success.form.bv', function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: '/api/message',
-            type: 'POST',
-            accepts: 'text',
-            dataType: 'text',
-            data: $(e.target).serialize(),
-            success: function (data, status, jqXHR) {
-                $('.msg-form-alert')
-                    .addClass('alert-success')
-                    .removeClass('alert-danger')
-                    .removeClass('hide')
-                    .text('Your message has been successfully sent.');
-            },
-            error: function (jqXHR, status, err) {
-                $('.msg-form-alert')
-                    .addClass('alert-danger')
-                    .removeClass('alert-success')
-                    .removeClass('hide')
-                    .text('Something went wrong, please try again.');
+        }).on('success.form.bv', function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/api/message',
+                type: 'POST',
+                accepts: 'text',
+                dataType: 'text',
+                data: $(e.target).serialize(),
+                success: function (data, status, jqXHR) {
+                    $('.msg-form-alert')
+                        .addClass('alert-success')
+                        .removeClass('alert-danger')
+                        .removeClass('hide')
+                        .text('Your message has been successfully sent.');
+                },
+                error: function (jqXHR, status, err) {
+                    $('.msg-form-alert')
+                        .addClass('alert-danger')
+                        .removeClass('alert-success')
+                        .removeClass('hide')
+                        .text('Something went wrong, please try again.');
+                }
+            })
+        }).on('error.validator.bv', function(e, data) {
+            if (data.field === 'message-email') {
+                data.element
+                    .data('bv.messages')
+                    .find('.help-block[data-bv-for="' + data.field + '"]').hide()
+                    .filter('[data-bv-validator="' + data.validator + '"]').show();
             }
-        })
-    }).on('error.validator.bv', function(e, data) {
-        if (data.field === 'message-email') {
-            data.element
-                .data('bv.messages')
-                .find('.help-block[data-bv-for="' + data.field + '"]').hide()
-                .filter('[data-bv-validator="' + data.validator + '"]').show();
-        }
-    });
+        });
 
-    $('.subscribe-form').bootstrapValidator({
-        message: 'This value is not valid.',
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            'subscribe-email': {
-                validators: {
-                    notEmpty: {
-                        message: 'The email is required and cannot be empty.'
-                    },
-                    stringLength: {
-                        min: 1,
-                        max: 200,
-                        message: 'The email must be more than 1 and less than 200 characters long.'
-                    },
-                    emailAddress: {
-                        message: 'The input is not a valid email address.'
-                    },
-                    regexp: {
-                        regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
-                        message: 'The input is not a valid email address.'
+        $('.subscribe-form').bootstrapValidator({
+            message: 'This value is not valid.',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                'subscribe-email': {
+                    validators: {
+                        notEmpty: {
+                            message: 'The email is required and cannot be empty.'
+                        },
+                        stringLength: {
+                            min: 1,
+                            max: 200,
+                            message: 'The email must be more than 1 and less than 200 characters long.'
+                        },
+                        emailAddress: {
+                            message: 'The input is not a valid email address.'
+                        },
+                        regexp: {
+                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                            message: 'The input is not a valid email address.'
+                        }
                     }
                 }
             }
-        }
-    }).on('success.form.bv', function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: '/api/subscribe',
-            type: 'POST',
-            accepts: 'text',
-            dataType: 'text',
-            data: $(e.target).serialize(),
-            success: function (data, status, jqXHR) {
-                $('.subs-form-alert')
-                    .addClass('alert-success')
-                    .removeClass('alert-danger')
-                    .removeClass('hide')
-                    .text('Thank you for subscribing.');
-            },
-            error: function (jqXHR, status, err) {
-                var message = 'Something went wrong, please try again.'
-                if (err === 'CONFLICT') {
-                    var message = 'Email address already subscribed.';
+        }).on('success.form.bv', function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: '/api/subscribe',
+                type: 'POST',
+                accepts: 'text',
+                dataType: 'text',
+                data: $(e.target).serialize(),
+                success: function (data, status, jqXHR) {
+                    $('.subs-form-alert')
+                        .addClass('alert-success')
+                        .removeClass('alert-danger')
+                        .removeClass('hide')
+                        .text('Thank you for subscribing.');
+                },
+                error: function (jqXHR, status, err) {
+                    var message = 'Something went wrong, please try again.'
+                    if (err === 'CONFLICT') {
+                        var message = 'Email address already subscribed.';
+                    }
+                    $('.subs-form-alert')
+                        .addClass('alert-danger')
+                        .removeClass('alert-success')
+                        .removeClass('hide')
+                        .text(message);
                 }
-                $('.subs-form-alert')
-                    .addClass('alert-danger')
-                    .removeClass('alert-success')
-                    .removeClass('hide')
-                    .text(message);
+            })
+        }).on('error.validator.bv', function(e, data) {
+            if (data.field === 'subscribe-email') {
+                data.element
+                    .data('bv.messages')
+                    .find('.help-block[data-bv-for="' + data.field + '"]').hide()
+                    .filter('[data-bv-validator="' + data.validator + '"]').show();
             }
-        })
-    }).on('error.validator.bv', function(e, data) {
-        if (data.field === 'subscribe-email') {
-            data.element
-                .data('bv.messages')
-                .find('.help-block[data-bv-for="' + data.field + '"]').hide()
-                .filter('[data-bv-validator="' + data.validator + '"]').show();
-        }
-    });
+        });
+    }
+
+    if ($().placeholder) {
+        $('input, textarea').placeholder();
+    }
 
 });
 
@@ -366,7 +374,7 @@ $(window).load(function() {
 
     fitCenter();
 
-    $('.fit-center').animate({'opacity': 1}, 100);
+    $('.js-fouc').animate({'opacity': 1}, 100);
 
     $(window).resize(function() {
         fitCenter();

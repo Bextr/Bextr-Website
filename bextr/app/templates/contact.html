@@ -22,12 +22,15 @@
                         <div class="alert msg-form-alert hide" role="alert"></div>
                         <form role="form" action="/api/message" method="POST" class="message-form">
                             <div class="form-group">
+                                {{ msg_form.name.label(class='sr-only') }}
                                 {{ msg_form.name(class='form-control input-lg', placeholder='Name') }}
                             </div>
                             <div class="form-group">
+                                {{ msg_form.email.label(class='sr-only') }}
                                 {{ msg_form.email(class='form-control input-lg', placeholder='Email', type='email') }}
                             </div>
                             <div class="form-group">
+                                {{ msg_form.text.label(class='sr-only') }}
                                 {{ msg_form.text(class='form-control input-lg', placeholder='Message', rows=6) }}
                             </div>
                             <div style="display:none;"><input id="message-csrf_token" name="message-csrf_token" type="hidden" value=""></div>
@@ -46,6 +49,7 @@
                         <div class="alert subs-form-alert hide" role="alert"></div>
                         <form role="form" action="/api/subscribe" method="POST" class="subscribe-form">
                             <div class="input-group">
+                                {{ subs_form.email.label(class='sr-only') }}
                                 <div class="form-group">
                                     {{ subs_form.email(class='form-control input-lg', placeholder='Enter email', type='email') }}
                                 </div>
@@ -60,3 +64,9 @@
             </div>
         </div>
 {% endblock content %}
+
+    {%- block scripts %}
+        {{ super() }}
+        <script src="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.0.8/jquery.placeholder.min.js"></script>
+    {%- endblock scripts %}

@@ -3,8 +3,7 @@ from app.content import (
     c_global,
     c_signage,
     c_indoor_signage,
-    c_outdoor_signage,
-    )
+    c_outdoor_signage)
 
 
 signage = Blueprint('signage', __name__)

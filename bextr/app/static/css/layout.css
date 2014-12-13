@@ -36,7 +36,6 @@ ul {
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    opacity: 0;
 }
 
 .hide {
@@ -46,12 +45,42 @@ ul {
 .alert {
     text-align: center;
 }
+
+.js-fouc {
+    opacity: 0;
+}
+
+.browsehappy {
+    z-index: 102;
+}
+
+.suboptimal {
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    background-color: #ae0000;
+    padding: 5px 0;
+}
+
+.suboptimal a,
+.suboptimal a:hover,
+.suboptimal a:active,
+.suboptimal a:visited {
+    color: yellow;
+}
 /* global end */
 
 
 /* header start */
 .navbar-brand {
-    padding: initial;
+    padding: 0;
     padding-left: 15px;
     width: auto;
     height: 50px;
@@ -70,16 +99,15 @@ ul {
 }
 
 .navbar-inverse {
-    background-color: initial;
-    border-color: initial;
+    background-color: transparent;
 }
 
 .navbar {
-    border: initial;
+    border: none;
 }
 
 .nav > li > a {
-    padding: initial;
+    padding: 0;
     margin-top: 20px;
     text-align: center;
 }
@@ -129,7 +157,7 @@ ul {
 }
 
 .slick-dots {
-   bottom: initial;
+   bottom: auto;
 }
 
 .slick-dots li button:before {
@@ -183,7 +211,7 @@ ul {
 .product-carousel {
     padding-top: 15px;
     padding-bottom: 15px;
-    margin-bottom: initial;
+    margin-bottom: 0;
 }
 
 .product-slide-img {
@@ -507,16 +535,16 @@ margin-bottom: 50px;
     .nav > li > a {
         margin-left: 30px;
         margin-top: 40px;
-        text-align: initial;
+        text-align: left;
     }
     .navbar {
-        margin-bottom: initial;
+        margin-bottom: 0;
     }
     /* header end */
 
 
     .member-img {
-        height: initial;
+        height: auto;
     }
 
     .member-name {
@@ -533,8 +561,8 @@ margin-bottom: 50px;
     }
 
     .slide-txt {
-        text-align: initial;
-        margin-bottom: initial;
+        text-align: left;
+        margin-bottom: 0;
         display: table;
     }
 

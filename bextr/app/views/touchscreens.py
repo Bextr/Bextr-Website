@@ -5,8 +5,7 @@ from app.content import (
     c_indoor_kiosks,
     c_outdoor_kiosks,
     c_touch_tables,
-    c_touch_windows
-    )
+    c_touch_windows)
 
 
 touchscreens = Blueprint('touchscreens', __name__)
