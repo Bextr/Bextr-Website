@@ -1,3 +1,3 @@
-from app import app, db
-db.create_all()
+from app import create_app
+app = create_app('config')
 app.run()

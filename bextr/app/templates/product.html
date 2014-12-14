@@ -1,8 +1,6 @@
 {% extends "layout.html" %}
 {% from 'template_macros.html' import cta, main_crs, sec_crs, product_crs, description %}
 
-{% block title %}{{ c_page.page_title }}{% endblock %}
-
 {%- block content %}
 {{- product_crs(c_page.products) }}
 {{- main_crs(c_page.main_carousel) }}

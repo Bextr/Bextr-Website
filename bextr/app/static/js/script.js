@@ -8,42 +8,42 @@ String.prototype.insertAt = function (index, string) {
 };
 
 function fitCenter() {
-        $('.fit-center').each(function() {
-            $(this).position({
-                my: 'center',
-                at: 'center',
-                of: $(this).parent()
-             });
-        });
+    $('.fit-center').each(function() {
+        $(this).position({
+            my: 'center',
+            at: 'center',
+            of: $(this).parent()
+         });
+    });
 }
 
 function setMember() {
-        $('.team-member').each(function(index) {
-            var img = $(this).find('.member-img');
-            var txt = $(this).find('.member-txt');
-            if ((Modernizr.mq('only all') && Modernizr.mq('(min-width: 768px)'))
-                || (!Modernizr.mq('only all') && document.body.clientWidth >= 768)) {
-                $(img, txt).css('height', 'auto');
-                $(img, txt).height(Math.max(img.height(), txt.height()));
-                if(index % 2 == 0) {
-                    txt.css('text-align', 'left');
-                }
-                else {
-                    txt.css('text-align', 'right');
-                }
+
+    $('.team-member').each(function(index) {
+        var img = $(this).find('.member-img');
+        var txt = $(this).find('.member-txt');
+        if ((Modernizr.mq('only all') && Modernizr.mq('(min-width: 768px)'))
+            || (!Modernizr.mq('only all') && document.body.clientWidth >= 768)) {
+            $(img, txt).css('height', 'auto');
+            $(img, txt).height(Math.max(img.height(), txt.height()));
+            if(index % 2 == 0) {
+                txt.css('text-align', 'left');
             }
             else {
-                console.log('bla');
-                img.css('height', '150px');
-                txt.css({'height': 'auto', 'text-align': 'center'});
+                txt.css('text-align', 'right');
             }
-        });
+        }
+        else {
+            img.css('height', '150px');
+            txt.css({'height': 'auto', 'text-align': 'center'});
+        }
+    });
 
 }
 
 function preloadImage(src) {
-        $('<img/>').attr('src', src).css('display', 'none').appendTo('body');
-    }
+    $('<img/>').attr('src', src).css('display', 'none').appendTo('body');
+}
 
 function setCurrentNav() {
 
@@ -77,9 +77,6 @@ function setCurrentProductNavImg(item) {
 function unsetCurrentProductNavImg(item) {
     $(item).attr('src', $(item).attr('src').replace('_current', ''));
 }
-
-
-
 
 $(document).ready(function(){
 

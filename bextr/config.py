@@ -3,7 +3,7 @@ from os.path import join, abspath, dirname
 
 _basedir = abspath(dirname(__file__))
 
-DEBUG = True
+DEBUG = False
 THREADS_PER_PAGE = 2
 JSONIFY_PRETTYPRINT_REGULAR = False
 # SESSION_COOKIE_SECURE = True
