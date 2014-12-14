@@ -1,6 +1,4 @@
 from flask import Flask
-from app.models import db
-from app.views.api import mail
 
 
 def create_app(config_name):
@@ -8,10 +6,14 @@ def create_app(config_name):
     app.config.from_object(config_name)
 
     if not app.config['FREEZING_SITE']:
+        from app.models import db
         db.init_app(app)
         with app.app_context():
             db.create_all()
+
+        from app.mail import mail
         mail.init_app(app)
+
         from app.views import api
         app.register_blueprint(api)
 

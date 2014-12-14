@@ -1,14 +1,14 @@
-from flask import Blueprint, abort, escape, current_app
+from flask import Blueprint, abort, escape
 from flask_wtf import Form
-from flask_mail import Mail, Message
 from time import time
 from app.forms import MessageForm, SubscribeForm
 from app.models import db, Subscriber
+from app.mail import fwd_site_message
 
 
-mail = Mail()
-_s = db.session
 api = Blueprint('api', __name__)
+
+_s = db.session
 
 
 def epoch():
@@ -25,12 +25,8 @@ def v_message():
     form = MessageForm(prefix='message')
 
     if form.validate_on_submit():
-        msg = Message('Message from ' + escape(form.name.data),
-                      recipients=current_app.config['MAIL_FORWARD_TO'],
-                      reply_to=escape(form.email.data),
-                      body=escape(form.text.data))
-        mail.send(msg)
-        return '', 204
+        fwd_site_message(form.name.data, form.email.data, form.text.data)
+        return ('', 204)
     abort(400)
 
 
@@ -44,6 +40,6 @@ def v_subscribe():
             subs = Subscriber(epoch=epoch(), email=email)
             _s.add(subs)
             _s.commit()
-            return '', 204
+            return ('', 204)
         abort(409)
     abort(400)
