@@ -117,7 +117,7 @@
                 <div class="client-carousel">
                 {%- for item in cont.clients %}
                     <div>
-                        <a href="{{ item.url }}">
+                        <a href="{{ item.url }}" rel="nofollow" target="_blank">
                             <div class="client-img">
                                 <img class="fit-center center-block" src="{{ url_for('static', filename=item.file) }}" alt="{{ item.desc }}">
                                 <span class="sr-only">{{ item.desc }}</span>
