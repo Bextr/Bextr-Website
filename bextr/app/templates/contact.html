@@ -21,15 +21,15 @@
                         <form role="form" action="/api/message" method="POST" class="message-form">
                             <div class="form-group">
                                 {{ msg_form.name.label(class='sr-only') }}
-                                {{ msg_form.name(class='form-control input-lg', placeholder='Name') }}
+                                {{ msg_form.name(class='form-control input-lg', placeholder='Name', required='') }}
                             </div>
                             <div class="form-group">
                                 {{ msg_form.email.label(class='sr-only') }}
-                                {{ msg_form.email(class='form-control input-lg', placeholder='Email', type='email') }}
+                                {{ msg_form.email(class='form-control input-lg', placeholder='Email', type='email', required='') }}
                             </div>
                             <div class="form-group">
                                 {{ msg_form.text.label(class='sr-only') }}
-                                {{ msg_form.text(class='form-control input-lg', placeholder='Message', rows=6) }}
+                                {{ msg_form.text(class='form-control input-lg', placeholder='Message', rows=6, required='') }}
                             </div>
                             <div style="display:none;"><input id="message-csrf_token" name="message-csrf_token" type="hidden" value=""></div>
                             <input type="submit" class="btn btn-lg btn-primary btn-block" value="Send">
@@ -49,7 +49,7 @@
                             <div class="input-group">
                                 {{ subs_form.email.label(class='sr-only') }}
                                 <div class="form-group">
-                                    {{ subs_form.email(class='form-control input-lg', placeholder='Enter email', type='email') }}
+                                    {{ subs_form.email(class='form-control input-lg', placeholder='Enter email', type='email', required='') }}
                                 </div>
                                 <div style="display:none;"><input id="subscribe-csrf_token" name="subscribe-csrf_token" type="hidden" value=""></div>
                                 <span class="input-group-btn">
