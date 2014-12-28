@@ -1,0 +1,56 @@
+page_title: Bextr - About
+intro:
+    title: Digital dreams. Bextr.
+    text: >
+        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit, sed quia non numquam eius modi tempora
+        incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        Nemo enim ipsam voluptatem quia voluptas sit aspernatur.
+team:
+    - name: Jerald Evans
+      position: Title
+      text: >
+          Sed ut perspiciatis unde omnis iste natus error sit accusantium
+          doloremque laudantium totam rem aperiam ipsa quae ab illo inventore
+          veritatis et quasi vitae.
+      img:
+          file: img/team_member_1.png
+          desc: ""
+    - name: Claire Harmon
+      position: Title
+      text: >
+          Sed ut perspiciatis unde omnis iste natus error sit accusantium
+          doloremque laudantium totam rem aperiam ipsa quae ab illo inventore
+          veritatis et quasi vitae.
+      img:
+          file: img/team_member_1.png
+          desc: ""
+    - name: Cindy Greer
+      position: Title
+      text: >
+          Sed ut perspiciatis unde omnis iste natus error sit accusantium
+          doloremque laudantium totam rem aperiam ipsa quae ab illo inventore
+          veritatis et quasi vitae.
+      img:
+          file: img/team_member_1.png
+          desc: ""
+    - name: Willis Ballard
+      position: Title
+      text: >
+          Sed ut perspiciatis unde omnis iste natus error sit accusantium
+          doloremque laudantium totam rem aperiam ipsa quae ab illo inventore
+          veritatis et quasi vitae.
+      img:
+          file: img/team_member_1.png
+          desc: ""
+cta:
+    top:
+        text: Want to hear the latest from bextr?
+        action:
+            text: Subscribe
+            url: "/contact#subscribe"
+    bottom:
+        text: Speak to a live person.
+        action:
+            text: Call us.
+            url: /contact

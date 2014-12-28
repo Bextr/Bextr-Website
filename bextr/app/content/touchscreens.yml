@@ -1,0 +1,124 @@
+page_title: Bextr - Touchscreens
+products:
+    - title: Indoor Kiosks
+      file: svg/indoor_kiosk.svg
+      url: /touchscreens/indoor-kiosks
+      desc: ""
+    - title: Outdoor Kiosks
+      file: svg/outdoor_kiosk.svg
+      url: /touchscreens/outdoor-kiosks
+      desc: ""
+    - title: Touch Tables
+      file: svg/touch_table.svg
+      url: /touchscreens/touch-tables
+      desc: ""
+    - title: Touch Windows
+      file: svg/touch_window.svg
+      url: /touchscreens/touch-windows
+      desc: ""
+main_carousel:
+    - title: Digital Signage
+      text: Accept orders receive payments from unmanned tablet stations
+      action:
+          text: Learn more
+          url: /signage/
+      img:
+          file: img/img_1.png
+          url: /signage/
+          desc: ""
+    - title: Touchscreens
+      text: Accept orders receive payments from unmanned tablet stations
+      action:
+          text: Learn more
+          url: /touchscreens/
+      img:
+          file: img/img_2.png
+          url: /touchscreens/
+          desc: ""
+sec_carousel:
+    - title: Digital Signage
+      text: Lorem ipsum dolor sit amet
+      action:
+          text: View
+          url: /static/img/img_1.png
+          lightbox:
+              enabled: true
+              is_video: false
+      img:
+          file: img/img_1.png
+          url: /static/img/img_1.png
+          desc: ""
+          lightbox:
+              enabled: true
+              is_video: false
+    - title: Bextr on the field
+      text: Lorem ipsum dolor sit amet consectetur adipiscing elit
+      action:
+          text: Watch
+          url: "http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent"
+          lightbox:
+              enabled: true
+              is_video: true
+      img:
+          file: img/video_thumb.jpg
+          url: "http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent"
+          desc: ""
+          lightbox:
+              enabled: true
+              is_video: true
+    - title: Touchscreens
+      text: Lorem ipsum dolor sit amet
+      action:
+          text: Learn more
+          url: /touchscreens/
+          lightbox:
+              enabled: false
+              is_video: false
+      img:
+          file: img/img_2.png
+          url: /touchscreens/
+          desc: ""
+          lightbox:
+              enabled: false
+              is_video: false
+    - title: Touchscreens
+      text: Lorem ipsum dolor sit amet
+      action:
+          text: Learn more
+          url: /touchscreens/
+          lightbox:
+              enabled: false
+              is_video: false
+      img:
+          file: img/img_2.png
+          url: /touchscreens/
+          desc: ""
+          lightbox:
+              enabled: false
+              is_video: false
+    - title: Touchscreens
+      text: Lorem ipsum dolor sit amet
+      action:
+          text: Learn more
+          url: /touchscreens/
+          lightbox:
+              enabled: false
+              is_video: false
+      img:
+          file: img/img_2.png
+          url: /touchscreens/
+          desc: ""
+          lightbox:
+              enabled: false
+              is_video: false
+cta:
+    top:
+        text: Want to hear the latest from bextr?
+        action:
+            text: Subscribe
+            url: "/contact#subscribe"
+    bottom:
+        text: Speak to a live person.
+        action:
+            text: Call us.
+            url: /contact

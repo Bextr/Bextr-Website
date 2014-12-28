@@ -22,7 +22,7 @@
 {%- macro main_crs(cont) %}
         <div class="container">
             <div class="main-carousel">
-            {%- for item in cont.slides %}
+            {%- for item in cont %}
                 <div class="row">
                     <div class="col-xs-12 col-sm-5 col-sm-offset-1">
                         <div class="slide-txt">
@@ -53,7 +53,7 @@
         <div class="sec-carousel-wrapper">
             <div class="container">
                 <div class="sec-carousel">
-                {%- for item in cont.slides %}
+                {%- for item in cont %}
                     <div>
                         <a class="{{ lightbox_setter(item.img.lightbox) }}" href="{{ item.img.url }}">
                             <div class="sec-slide-img">
@@ -99,13 +99,11 @@
 {%- macro description(cont) %}
         <div class="description-wrapper">
             <div class="container">
-            {%- for item in cont %}
                 <div class="row description">
                     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-                        {{ item }}
+                        {{ cont }}
                     </div>
                 </div>
-            {%- endfor %}
             </div>
         </div>
 {%- endmacro %}

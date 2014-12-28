@@ -1,0 +1,13 @@
+page_title: Bextr - Contact
+call:
+    title: Speak to a live person
+    text: >
+        Sed ut perspiciatis unde omnis iste natus error sit accusantium
+        doloremque laudantium
+    action:
+        text: Call (888) 605-4866
+        url: "tel:8886054866"
+message:
+    title: Leave us a message
+subscribe:
+    title: Get notified about Bextr updates
