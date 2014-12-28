@@ -1,6 +1,7 @@
 from flask import escape, current_app
 from flask_mail import Mail, Message
 
+
 mail = Mail()
 
 

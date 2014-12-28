@@ -1,7 +1,8 @@
 import os
 from os.path import join, abspath, dirname
 
-_basedir = abspath(dirname(__file__))
+
+_base_dir = abspath(dirname(__file__))
 
 DEBUG = False
 THREADS_PER_PAGE = 2
@@ -13,9 +14,9 @@ SECRET_KEY = 'This string will be replaced with a proper key.'
 
 WTF_CSRF_SECRET_KEY = 'This string will be replaced with a proper key.'
 
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + join(_basedir, 'storage.sqlite')
+SQLALCHEMY_DATABASE_URI = 'sqlite:///' + join(_base_dir, 'storage.sqlite')
 
-FREEZER_DESTINATION = join(_basedir, 'build')
+FREEZER_DESTINATION = join(_base_dir, 'build')
 FREEZER_DEFAULT_MIMETYPE = 'text/html'
 
 MAIL_SERVER = 'smtp.mailgun.org'

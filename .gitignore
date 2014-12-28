@@ -6,3 +6,4 @@
 *.db
 *.sqlite
 build/
+*.packed.min.*
