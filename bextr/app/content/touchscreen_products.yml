@@ -1,0 +1,16 @@
+- title: Indoor Kiosks
+  file: svg/indoor_kiosk.svg
+  url: /touchscreens/indoor-kiosks
+  desc: ""
+- title: Outdoor Kiosks
+  file: svg/outdoor_kiosk.svg
+  url: /touchscreens/outdoor-kiosks
+  desc: ""
+- title: Touch Tables
+  file: svg/touch_table.svg
+  url: /touchscreens/touch-tables
+  desc: ""
+- title: Touch Windows
+  file: svg/touch_window.svg
+  url: /touchscreens/touch-windows
+  desc: ""

@@ -1,13 +1,5 @@
 page_title: Bextr - Indoor Signage
-products:
-    - title: Indoor Signage
-      file: svg/indoor_kiosk.svg
-      url: /signage/indoor-signage
-      desc: ""
-    - title: Outdoor Signage
-      file: svg/outdoor_kiosk.svg
-      url: /signage/outdoor-signage
-      desc: ""
+products: !include signage_products.yml
 main_carousel:
     - title: Digital Signage
       text: Accept orders receive payments from unmanned tablet stations

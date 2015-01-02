@@ -1,21 +1,5 @@
 page_title: Bextr - Indoor Kiosks
-products:
-    - title: Indoor Kiosks
-      file: svg/indoor_kiosk.svg
-      url: /touchscreens/indoor-kiosks
-      desc: ""
-    - title: Outdoor Kiosks
-      file: svg/outdoor_kiosk.svg
-      url: /touchscreens/outdoor-kiosks
-      desc: ""
-    - title: Touch Tables
-      file: svg/touch_table.svg
-      url: /touchscreens/touch-tables
-      desc: ""
-    - title: Touch Windows
-      file: svg/touch_window.svg
-      url: /touchscreens/touch-windows
-      desc: ""
+products: !include touchscreen_products.yml
 main_carousel:
     - title: Digital Signage
       text: Accept orders receive payments from unmanned tablet stations
