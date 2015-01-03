@@ -1,10 +1,8 @@
-{%- macro lightbox_setter(cont) %}
-    {%- if cont.enabled -%}
-        {%- if cont.is_video -%}
-            video-gallery
-        {%- else -%}
-            image-gallery
-        {%- endif -%}
+{%- macro lightbox_setter(type) %}
+    {%- if type == 'video' -%}
+        video-gallery
+    {%- elif type == 'image' -%}
+        image-gallery
     {%- endif -%}
 {%- endmacro %}
 

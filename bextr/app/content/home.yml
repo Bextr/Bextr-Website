@@ -24,76 +24,50 @@ sec_carousel:
       action:
           text: View
           url: /static/img/img_1.png
-          lightbox:
-              enabled: true
-              is_video: false
+          lightbox: image
       img:
           file: img/img_1.png
           url: /static/img/img_1.png
           desc: ""
-          lightbox:
-              enabled: true
-              is_video: false
+          lightbox: image
     - title: Bextr on the field
       text: Lorem ipsum dolor sit amet consectetur adipiscing elit
       action:
           text: Watch
           url: "http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent"
-          lightbox:
-              enabled: true
-              is_video: true
+          lightbox: video
       img:
           file: img/video_thumb.jpg
           url: "http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&wmode=transparent"
           desc: ""
-          lightbox:
-              enabled: true
-              is_video: true
+          lightbox: video
     - title: Touchscreens
       text: Lorem ipsum dolor sit amet
       action:
           text: Learn more
           url: /touchscreens/
-          lightbox:
-              enabled: false
-              is_video: false
       img:
           file: img/img_2.png
           url: /touchscreens/
           desc: ""
-          lightbox:
-              enabled: false
-              is_video: false
     - title: Touchscreens
       text: Lorem ipsum dolor sit amet
       action:
           text: Learn more
           url: /touchscreens/
-          lightbox:
-              enabled: false
-              is_video: false
       img:
           file: img/img_2.png
           url: /touchscreens/
           desc: ""
-          lightbox:
-              enabled: false
-              is_video: false
     - title: Touchscreens
       text: Lorem ipsum dolor sit amet
       action:
           text: Learn more
           url: /touchscreens/
-          lightbox:
-              enabled: false
-              is_video: false
       img:
           file: img/img_2.png
           url: /touchscreens/
           desc: ""
-          lightbox:
-              enabled: false
-              is_video: false
 cta:
     top:
         text: Want to hear the latest from bextr?
@@ -108,7 +82,7 @@ cta:
 description: >
     Bextr combines made-to-order interactive software with industrial grade
     touch screen hardware to deliver versatile and durable solutions.
-clients_carousel:
+client_carousel:
     title: OUR CLIENTS
     clients:
         - file: img/client_1.png
