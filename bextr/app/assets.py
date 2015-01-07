@@ -7,6 +7,6 @@ js = Bundle('js/jquery-ui.js', 'js/script.js',
             filters='rjsmin', output='js/packed.min.js')
 assets.register('js_all', js)
 
-css = Bundle('css/style.css',
+css = Bundle('css/style.css', 'css/colorbox.css',
              filters='cssutils', output='css/packed.min.css')
 assets.register('css_all', css)
