@@ -14,7 +14,6 @@ pip install --upgrade Flask Flask-SQLAlchemy Flask-WTF Frozen-Flask Flask-Mail F
 * Content is declared in yaml files (short tutorial [here](http://learnxinyminutes.com/docs/yaml/)) which are kept in `bextr/app/content`, a file usually equals to a page, exept for header/footer content (`global.yml`) and product lists (`signage_products.yml` and `touchscreen_products.yml`)
 * Linked files (images, documents, etc.) are kept in `bextr/app/static`
 * When declaring a file path in your yaml files, the path should be relative to the `static` folder (for `bextr/app/static/img/img_1.png` use `img/img_1.png`)
-* 
 
 
 ##Changing text

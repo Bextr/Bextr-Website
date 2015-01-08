@@ -29,7 +29,7 @@ assets_cache = join(build_dir, 'static', '.webassets-cache')
 if isdir(assets_cache):
     rmtree(assets_cache)
 
-# Minify html files. Not used until the footer is fixed.
+# Minify html files. Not used until the footer is fixed. bs4 must output html5.
 # for root, subdirs, files in walk(build_dir):
 #     for fl in files:
 #         if fl.endswith('.html') or '.' not in fl:
