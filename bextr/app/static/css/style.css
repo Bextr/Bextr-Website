@@ -1,4 +1,4 @@
-/* global start */
+/* global css start */
 html, body {
     width: 100%;
     height: 100%;
@@ -76,7 +76,7 @@ ul {
     color: yellow;
     text-decoration: underline !important;
 }
-/* global end */
+/* global css end */
 
 
 /* header start */
@@ -542,20 +542,7 @@ margin-bottom: 50px;
     }
     /* header end */
 
-
-    .member-img {
-        height: auto;
-    }
-
-    .member-name {
-        font-size: 300%;
-    }
-
-    .member-title {
-        font-size: 180%;
-    }
-
-
+    /* main carousel start */
     .slide-img, .slide-txt {
         height: 300px;
     }
@@ -583,13 +570,17 @@ margin-bottom: 50px;
     .slide-action {
         font-size: 155%;
     }
+    /* main carousel end */
 
-    .aboutus {
-        margin-top: 50px;
-    }
-
+    /* description start */
     .description {
         font-size: 160%;
+    }
+    /* description end */
+
+    /* about us start */
+    .aboutus {
+        margin-top: 50px;
     }
 
     .aboutus-title {
@@ -601,6 +592,21 @@ margin-bottom: 50px;
         font-size: 200%;
     }
 
+    .member-img {
+        height: auto;
+    }
+
+    .member-name {
+        font-size: 300%;
+    }
+
+    .member-title {
+        font-size: 180%;
+    }
+    /* about us end */
+
+
+    /* contact start */
     .callus {
         margin-top: 50px;
     }
@@ -617,6 +623,7 @@ margin-bottom: 50px;
         font-weight: 700;
         font-size: 280%;
     }
+    /* contact end */
 
 }
 
@@ -638,7 +645,7 @@ margin-bottom: 50px;
     }
     /* header end */
 
-
+    /* main carousel start */
     .slide-img, .slide-txt {
         height: 400px;
     }
@@ -655,11 +662,15 @@ margin-bottom: 50px;
     .slide-action {
         font-size: 187%;
     }
+    /* main carousel end */
 
+    /* description start */
     .description {
         font-size: 180%;
     }
+    /* description end */
 
+    /* about us start */
     .aboutus-title {
         font-size: 340%;
         margin-bottom: 50px;
@@ -668,7 +679,9 @@ margin-bottom: 50px;
     .aboutus-text {
         font-size: 220%;
     }
+    /* about us end */
 
+    /* contact start */
     .callus {
         margin-bottom: 70px;
     }
@@ -680,6 +693,7 @@ margin-bottom: 50px;
     .callus-desc {
         font-size: 220%;
     }
+    /* contact end */
 
 }
 
@@ -693,6 +707,7 @@ margin-bottom: 50px;
     }
     /* header end */
 
+    /* main carousel start */
     .slide-title {
         font-size: 500%;
     }
@@ -704,6 +719,6 @@ margin-bottom: 50px;
     .slide-action {
         font-size: 210%;
     }
+    /* main carousel end */
 
 }
-
